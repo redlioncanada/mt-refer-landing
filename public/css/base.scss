@@ -9,7 +9,15 @@ html, body {
     width: 100%;
 }
 
-rl-wp-refer-landing {
+@font-face {
+	font-family: 'Akzidenz';
+	src: url('/public/fonts/AkzidenzGroteskPro-BoldCn.eot');
+	src: url('/public/fonts/AkzidenzGroteskPro-BoldCn.eot?#iefix') format('embedded-opentype'),
+		url('/public/fonts/AkzidenzGroteskPro-BoldCn.woff') format('woff'),
+		url('/public/fonts/AkzidenzGroteskPro-BoldCn.ttf') format('truetype');
+}
+
+rl-mt-refer-landing {
 	@import 'reset.scss';
 	@import 'variables.scss';
 	@import 'mixins.scss';
@@ -27,7 +35,7 @@ rl-wp-refer-landing {
     @import 'components/footer.scss';
 
 	width: 100%;
-	@include Helvetica;
+	@include Arial;
 	font-size: 12pt;
 	position: relative;
 	display: block;
@@ -36,7 +44,7 @@ rl-wp-refer-landing {
 	h1,h2,h3,h4,h5,[class*='title'] {
 		color: $titleColor !important;
 		cursor: default;
-		@include Helvetica-Medium;
+		@include Akzidenz;
 	}
 
 	p,span,div {

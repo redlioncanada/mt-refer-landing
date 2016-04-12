@@ -103,7 +103,7 @@ features {
         font-weight: 100;
         margin-bottom: 2px;
         color: $titleColor;
-        @include Helvetica-Bold;
+        @include Arial-Bold;
         top: 198px;
         opacity: 0;
         font-size: smaller;
@@ -127,7 +127,7 @@ features {
     }
 
     .wp-landing-over-cta {
-        @include Helvetica-Medium;
+        @include Arial-Medium;
         color: $accentColor;
         top: 230px;
 

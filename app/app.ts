@@ -17,7 +17,7 @@ import {Footer} from './landing.footer'
 
 
 @Component({
-    selector: 'rl-wp-refer-landing',
+    selector: 'rl-mt-refer-landing',
     templateUrl: 'app/views/app.view.html',
     directives: [VideoPlayer, AppMasthead, Features, ProductSelector, Banner, MoreFeatures, Header, Footer]
 })

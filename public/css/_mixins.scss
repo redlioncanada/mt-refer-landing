@@ -1,15 +1,30 @@
-@mixin Helvetica() {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@mixin Akzidenz() {
+	font-family: 'Akzidenz', Arial, sans-serif;
 	font-weight: 200;
 }
 
-@mixin Helvetica-Medium() {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@mixin Akzidenz-Medium() {
+	font-family: 'Akzidenz', Arial, sans-serif;
 	font-weight: 400;
 }
 
-@mixin Helvetica-Bold() {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@mixin Akzidenz-Bold() {
+	font-family: 'Akzidenz', Arial, sans-serif;
+	font-weight: 800;
+}
+
+@mixin Arial() {
+	font-family: Arial, sans-serif;
+	font-weight: 200;
+}
+
+@mixin Arial-Medium() {
+	font-family: Arial, sans-serif;
+	font-weight: 400;
+}
+
+@mixin Arial-Bold() {
+	font-family: Arial, sans-serif;
 	font-weight: 800;
 }
 
