@@ -1,0 +1,72 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#container{
+    width: 100%;
+}
+
+rl-wp-refer-landing {
+	@import 'reset.scss';
+	@import 'variables.scss';
+	@import 'mixins.scss';
+	@import 'utils.scss';
+	@import 'animations.scss';
+
+	@import 'components/header.scss';
+	@import 'components/videoplayer.scss';
+    @import 'components/masthead.scss';
+    @import 'components/features.scss';
+    @import 'components/selector.scss';
+    @import 'components/learn-more-button.scss';
+    @import 'components/more-features.scss';
+    @import 'components/banner.scss';
+    @import 'components/footer.scss';
+
+	width: 100%;
+	@include Helvetica;
+	font-size: 12pt;
+	position: relative;
+	display: block;
+	margin-top: 118px;
+
+	h1,h2,h3,h4,h5,[class*='title'] {
+		color: $titleColor !important;
+		cursor: default;
+		@include Helvetica-Medium;
+	}
+
+	p,span,div {
+		cursor: pointer;
+	}
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+	a {
+		color: $linkColor;
+	}
+
+	> *:not(header):not(footer) {
+		width: 100%;
+        max-width:$appWidth;
+        min-width: 320px;
+		margin: 0 auto;
+		position: relative;
+		display: block;
+	}
+
+	@media screen and (max-width: $mobileBreakpoint) {
+		margin-top: initial;
+	}
+
+	sup {
+		font-size: 0.5em;
+	}
+}
+
+@import 'components/browser-specific/ie.scss';

@@ -1,0 +1,31 @@
+banner {
+	cursor: default;
+
+	img {
+		width: 100%;
+	}
+
+	learn-more-button {
+		top: 80%;
+		right: 38%;
+        width: 18%;
+        height: 34px;
+        border-radius: 20px;
+
+        @media screen and (max-width: 685px) {
+            font-size: small;
+            right: 37%;
+            width: 25%;
+            height: 28px;
+        }
+	}
+}
+
+banner.fr {
+	learn-more-button {
+		@media screen and (max-width: $mobileBreakpoint) {
+			right: 37%;
+			width: 28%;
+		}
+	}
+}
