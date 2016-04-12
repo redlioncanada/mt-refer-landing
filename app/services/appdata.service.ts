@@ -14,9 +14,10 @@ export class AppData {
 		this.contents.en = {
 			masthead: {
 				enabled: true,
-				image: "./public/images/refer-landing-masthead.jpg",
+				image: "./public/images/refer-landing-masthead-1.jpg",
+				imageForeground: "./public/images/refer-landing-masthead-2.jpg",
 				alt: "test",
-				title: ""
+				title: "Refrigerators"
 			},
 			banner: {
 				enabled: true,
@@ -47,7 +48,7 @@ export class AppData {
 					},
 					{
 			        	image: "./public/images/refer-landing-mag-glass.png",
-			        	title: "Find Your Whirlpool",
+			        	title: "Find Your Maytag",
 						alt: "test",
 			        	desc: "Need help finding your refrigerator?",
 			        	cta: "Click Here",
@@ -189,6 +190,7 @@ export class AppData {
 			masthead: {
 				enabled: true,
 				image: "./public/images/refer-landing-masthead-fr.jpg",
+				imageForeground: "./public/images/refer-landing-masthead-fr.jpg",
 				alt: "test",
 				title: ""
 			},

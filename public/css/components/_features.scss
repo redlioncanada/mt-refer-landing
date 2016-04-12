@@ -1,4 +1,4 @@
-$featureButtonHeight: 285px;
+$featureButtonHeight: 235px;
 $featureButtonHeightMobile: 220px;
 
 features {
@@ -7,19 +7,14 @@ features {
         width: 100%;
         height: 300px;
         float: none;
-        border: 4px solid $accentColor;
     }
+
     @media screen and (max-width: 1275px) {
         .row {
             width: 75%;
             position: relative;
             left: 13%;
             height: $featureButtonHeightMobile;
-        }
-
-        .wp-landing-feature-button:after {
-            height: $featureButtonHeightMobile*0.7 !important;
-            top: $featureButtonHeightMobile*0.3 / 2 !important;
         }
     }
     @media screen and (max-width: 785px) {
@@ -30,7 +25,14 @@ features {
             left: .3%;
         }
     }
-    .wp-landing-feature-icon {
+
+    feature-button {
+        width: 33.3333333333333%;
+        display: block;
+        float: left;
+    }
+
+    .mt-landing-feature-icon {
         width: 100px;
         height: 100px;
         border-radius: 50px;
@@ -64,7 +66,7 @@ features {
         }
     }
 
-    .wp-landing-feature-title {
+    .mt-landing-feature-title {
         text-transform: uppercase;
         width: 100%;
         top: 150px;
@@ -79,18 +81,32 @@ features {
         }
     }
 
-    .wp-landing-feature-button-over{
+    .mt-landing-feature-button-over{
         opacity: 0;
         z-index: 2;
-        display: table;
         width: 100%;
         height: 100%;
         position: relative;
         @include transition(0.2s);
     }
 
-    .wp-landing-feature-copy-container {
+    .mt-landing-feature-button-over-table {
+        width: 100%;
+        height: 100%;
+        display: table;
+        z-index: 2;
+    }
+
+    .mt-landing-feature-button-over-table-cell {
+        vertical-align: middle;
         display: table-cell;
+    }
+
+    .mt-landing-feature-button:hover .mt-landing-feature-button-over {
+        opacity: 1;
+    }
+
+    .mt-landing-feature-copy-container {
         color: $features-copyColor;
         position: relative;
         height: inherit;
@@ -99,13 +115,11 @@ features {
         padding: 0 14px;
     }
 
-    .wp-landing-over-copy {
+    .mt-landing-over-copy {
         font-weight: 100;
-        margin-bottom: 2px;
-        color: $titleColor;
-        @include Arial-Bold;
-        top: 198px;
-        opacity: 0;
+        margin-bottom: 5px;
+        color: #FFF;
+        @include Arial;
         font-size: smaller;
         @include transition(0.2s);
 
@@ -120,74 +134,59 @@ features {
         }
     }
 
-    .wp-landing-over-copy, .wp-landing-over-cta {
+    .mt-landing-over-copy, .mt-landing-over-cta {
         width: 100%;
         text-align: center;
-        position: absolute;
     }
 
-    .wp-landing-over-cta {
+    .mt-landing-over-cta {
         @include Arial-Medium;
-        color: $accentColor;
-        top: 230px;
-
-        @media screen and (max-width: 1275px) {
-            top: 168px;
-        }
+        color: #FFF;
 
         @media screen and (max-width: $mobileBreakpoint) {
             font-size: 0.8em;
             margin-left: -10px;
-
-            .wp-landing-over-cta:after {
-                top: 1px;
-            }
         }
     }
 
-    .wp-landing-over-cta:after {
-        position: absolute;
-        content: ' ';
-        background: url(../images/arrow.jpg);
-        width: 15px;
-        height: 15px;
-        top: 2px;
-        margin-left: 4px;
-    }
-
-    .wp-landing-feature-button-over-background {
+    .mt-landing-feature-button-over-background, .mt-landing-feature-button-over-container {
         height: 100%;
         width: 100%;
         background-color: $accentColor;
         position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
     }
 
-    .wp-landing-feature-button {
-        width: 33%;
-        padding: 2px;
-        float: left;
+    .mt-landing-feature-button-over-container {
+        z-index: 2;
+    }
+
+    .mt-landing-feature-button {
         height: $featureButtonHeight;
         position: relative;
         box-sizing: border-box;
+        border: 4px solid #cccccc;
         @include transition(0.5s);
 
         @media screen and (max-width: 1275px) {
             height: 150px;
         }
 
-        .wp-landing-feature-button-up {
+        .mt-landing-feature-button-up {
             position: relative;
             z-index: 1;
         }
 
-        .wp-landing-innerBtn {
+        .mt-landing-innerBtn {
             position: absolute;
         }
 
-        .wp-landing-feature-rule {
-            width: 70%;
+        .mt-landing-feature-rule {
+            width: 30%;
             height: 5px;
-            border-top: 1px dashed #585858;
+            border-top: 3px solid $accentColor;
             top: 171px;
             left: 0;
             right: 0;
@@ -202,40 +201,27 @@ features {
         }
     }
 
-    .wp-landing-feature-button:after {
-        content: ' ';
-        width: 1px;
-        height: $featureButtonHeight*0.7;
-        top: $featureButtonHeight*0.3 / 2;
-        position: absolute;
-        right: 0;
-        border-left: 1px dashed #585858;
-    }
-
-    .wp-landing-feature-button:hover .wp-landing-over-copy {
+    .mt-landing-feature-button:hover .mt-landing-over-copy {
         opacity: 1;
     }
 
     @media screen and (max-width: $mobileBreakpoint) {
-        .wp-landing-feature-button .wp-landing-over-copy {
+        .mt-landing-feature-button .mt-landing-over-copy {
             opacity: 1;
         }
     }
 
     feature-button:first-of-type {
-        .wp-landing-feature-button {
+        .mt-landing-feature-button {
             margin-left: 0px;
+            margin-right: 3px;
         }
     }
 
     feature-button:last-of-type {
-        .wp-landing-feature-button {
+        .mt-landing-feature-button {
             margin-right: 0px;
-            margin-left: 2px;
-        }
-
-        .wp-landing-feature-button:after {
-            content: initial;
+            margin-left: 3px;
         }
     }
 }
@@ -245,63 +231,25 @@ features.fr {
         @media screen and (max-width: 1275px) {
             $featureButtonHeight: 235px;
             height: $featureButtonHeight;
-
-            .wp-landing-feature-button:after {
-                height: $featureButtonHeightMobile*0.7 !important;
-                top: $featureButtonHeightMobile*0.3 / 2 !important;
-            }
         }
 
         @media screen and (max-width: $mobileBreakpoint) {
             $featureButtonHeight: 230px;
             height: $featureButtonHeight;
-
-            .wp-landing-feature-button:after {
-                height: $featureButtonHeightMobile*0.7 !important;
-                top: $featureButtonHeightMobile*0.3 / 2 !important;
-            }
         }
     }
 
-    .wp-landing-feature-rule {
-        top: 187px;
-
+    .mt-landing-feature-rule {
         @media screen and (max-width: 1275px) {
-            top: 124px;
             font-size: 0.7em;
         }
-
-        @media screen and (max-width: $mobileBreakpoint) {
-            top: 132px;
-        }
     }
 
-    .wp-landing-over-cta {
-        top: 240px;
 
-        @media screen and (max-width: 1275px) {
-            top: 188px;
-        }
-
-        @media screen and (max-width: $mobileBreakpoint) {
-            top: 190px;
-        }
-    }
-
-    .wp-landing-feature-title {
+    .mt-landing-feature-title {
         @media screen and (max-width: 1275px) {
             top: 95px;
             font-size: 0.8em;
-        }
-    }
-
-    .wp-landing-over-copy {
-        @media screen and (max-width: 1275px) {
-            top: 148px;
-        }
-
-        @media screen and (max-width: $mobileBreakpoint) {
-            top: 150px;
         }
     }
 }

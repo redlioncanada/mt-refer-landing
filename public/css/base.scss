@@ -44,7 +44,13 @@ rl-mt-refer-landing {
 	h1,h2,h3,h4,h5,[class*='title'] {
 		color: $titleColor !important;
 		cursor: default;
+		text-transform: uppercase;
+		letter-spacing: -1px;
 		@include Akzidenz;
+	}
+
+	.subtitle {
+		color: $subtitleColor !important;
 	}
 
 	p,span,div {

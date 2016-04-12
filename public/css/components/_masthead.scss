@@ -8,16 +8,34 @@ masthead {
         padding-top: initial;
     }
 
-    #wp-landing-masthead {
+    .mt-landing-image {
+        position: relative;
         overflow: hidden;
         cursor: default;
         margin-bottom: 20px;
-        
+
+        img:first-child {
+            z-index: 1;
+        }
+
+        img:last-child {
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+            top: 0;
+        }
+
         @media screen and (min-width: 768px) and  (max-width: 1275px){
              height: 250px;
         }
     }
-    
+
+    .mt-landing-image.fade-in {
+        img:last-child {
+            opacity: 1;
+        }
+    }
+
     img{
         width: 100%;
         @media screen and (min-width: 768px) and  (max-width: 1275px){
@@ -30,7 +48,7 @@ masthead {
         @include transition(0.5s);
     }
 
-    .wp-landing-title{
+    .mt-landing-title{
         h1{
             text-transform: uppercase;
             font-weight: 100;

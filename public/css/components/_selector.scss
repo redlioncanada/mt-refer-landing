@@ -91,10 +91,11 @@ product-selector {
         width: 300px;
         font-weight: 300;
         font-size: 32px;
-        color: #000000!important;
+        color: #6d6f71 !important;
         opacity: 0;
         line-height: 30px;
         text-align: left;
+        @include Arial();
 
         @media screen and (max-width: $mobileBreakpoint) {
             display: none;
