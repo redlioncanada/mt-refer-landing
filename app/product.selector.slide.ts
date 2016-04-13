@@ -11,7 +11,7 @@ import {LearnMoreButton} from './landing.learn-more.button'
             <div class="rl-wp-lndng-fridge"><img class="{{fridge}}" src="{{fridge}}" alt="{{fridgeAlt}}" /></div>
             <div class="rl-wp-lndng-fridge-title">{{fridgeTitle}}</div>
             <div class="rl-wp-lndng-fridge-desc">{{fridgeDescription}}</div>
-            <learn-more-button [link]="fridgeUrl" [text]="ctaText"></learn-more-button>
+            <learn-more-button [link]="fridgeUrl" [text]="ctaText" [backgroundImage]="ctaBackground"></learn-more-button>
         </div>
     `,
     directives: [LearnMoreButton]
@@ -26,10 +26,5 @@ export class ProductSlide {
     @Input() selected
     @Input() ctaText
     @Input() fridgeAlt
-    
-    ngOnChanges(changes) {
-        if ("selected" in changes) {
-            console.log(changes)
-        }
-    }
+    @Input() ctaBackground
 }

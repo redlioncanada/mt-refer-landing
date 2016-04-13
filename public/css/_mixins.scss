@@ -28,6 +28,11 @@
 	font-weight: 800;
 }
 
+@mixin Arial-Black() {
+	font-family: Arial Black, Arial Bold, sans-serif;
+	font-weight: 200;
+}
+
 @mixin header-text() {
 	font-size: 3em;
 	text-align: center;
@@ -37,6 +42,13 @@
 @mixin grow($amount) {
 	transform: scale($amount);
 	-webkit-transform: scale($amount);
+}
+
+@mixin desaturate($amount) {
+	filter: grayscale($amount);
+	-webkit-filter: grayscale($amount);
+	-moz-filter: grayscale($amount);
+	-o-filter: grayscale($amount);
 }
 
 @mixin transform-reset {

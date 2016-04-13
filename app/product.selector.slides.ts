@@ -13,7 +13,7 @@ declare var $: JQueryStatic;
     template: `
       <div class="row">
         <div class="product-slide-background"></div>
-          <product-slide class="{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i=index" [selected]="selectedProduct.prodId == product.prodId" [fridge]= "product.prodImage" [fridgeTitle]= "product.prodName" [fridgeDescription]="product.prodDescription" [fridgeUrl]="product.prodUrl" [fridgeId]="product.prodId" [ctaText]="product.ctaText" [fridgeAlt]="product.prodAlt">
+          <product-slide class="{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i=index" [selected]="selectedProduct.prodId == product.prodId" [fridge]= "product.prodImage" [fridgeTitle]= "product.prodName" [fridgeDescription]="product.prodDescription" [fridgeUrl]="product.prodUrl" [fridgeId]="product.prodId" [ctaText]="product.ctaText" [fridgeAlt]="product.prodAlt" [ctaBackground]="product.ctaBackground">
 
           </product-slide>
       </div>

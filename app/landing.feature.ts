@@ -31,7 +31,7 @@ export class Features {
                     feature.image,
                     feature.title,
                     feature.desc,
-                    feature.cta,
+                    feature.ctaText,
                     feature.link,
                     feature.type,
                     feature.alt

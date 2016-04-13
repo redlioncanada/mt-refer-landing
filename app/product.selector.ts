@@ -33,6 +33,7 @@ export class ProductSelector {
 		this.products = []
         for (var i in data.productselector.products) {
             var product = data.productselector.products[i]
+
             this.products.push(
                 new ProductModel(
                     product.image,
@@ -41,7 +42,8 @@ export class ProductSelector {
                     product.link,
                     product.id,
                     product.ctaText,
-                    product.alt
+                    product.alt,
+                    product.ctaBackground
                 )
             )
         }

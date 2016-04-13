@@ -433,29 +433,19 @@ rl-mt-refer-landing {
         margin-top: 0px;
         font-size: 2em; } }
   rl-mt-refer-landing videoplayer h2.wp-refer-landing-videoplayer-title {
-    font-size: 3em;
-    text-align: center;
-    width: 100%; }
+    color: #FFF !important; }
     @media screen and (max-width: 820px) {
       rl-mt-refer-landing videoplayer h2.wp-refer-landing-videoplayer-title {
         font-size: 1em; } }
   rl-mt-refer-landing videoplayer > ul {
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #002e5a; }
     rl-mt-refer-landing videoplayer > ul li {
       float: left;
       width: 33.333333333%;
-      padding: 0 5px; }
+      padding-right: 5px; }
     rl-mt-refer-landing videoplayer > ul li:last-child {
       padding-right: 0; }
-    rl-mt-refer-landing videoplayer > ul li:first-child {
-      padding-left: 0; }
-    rl-mt-refer-landing videoplayer > ul li:nth-child(2) img {
-      width: 101.5%; }
-    rl-mt-refer-landing videoplayer > ul li:nth-child(2) videoplayer-selector .wp-refer-landing-videoplayer-title {
-      margin-top: -65px; }
-    @media screen and (max-width: 820px) {
-      rl-mt-refer-landing videoplayer > ul li:nth-child(2) videoplayer-selector .wp-refer-landing-videoplayer-title {
-        margin-top: -23px; } }
   rl-mt-refer-landing videoplayer-player {
     width: 100%; }
     rl-mt-refer-landing videoplayer-player ul {
@@ -469,7 +459,7 @@ rl-mt-refer-landing {
     rl-mt-refer-landing videoplayer-player .wp-refer-landing-videoplayer-text {
       width: 100%;
       padding: 28px 40px;
-      background-color: #FFFFFF;
+      background-color: #002e5a;
       color: #6d6f71;
       margin-top: -5px; }
       rl-mt-refer-landing videoplayer-player .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-description, rl-mt-refer-landing videoplayer-player .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-title {
@@ -480,7 +470,12 @@ rl-mt-refer-landing {
           rl-mt-refer-landing videoplayer-player .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-description {
             font-size: 66%; } }
   rl-mt-refer-landing videoplayer-selector {
-    width: 100%; }
+    width: 100%;
+    height: 309px; }
+    rl-mt-refer-landing videoplayer-selector > div {
+      height: inherit; }
+    rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-background {
+      width: 100%; }
     rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text {
       height: 100%;
       width: 100%;
@@ -489,7 +484,7 @@ rl-mt-refer-landing {
       @media screen and (max-width: 820px) {
         rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text {
           top: -5px; } }
-      rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-title, rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-button {
+      rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-title, rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text learn-more-button {
         top: 50%;
         text-align: center;
         color: #FFFFFF;
@@ -502,44 +497,39 @@ rl-mt-refer-landing {
         @media screen and (max-width: 820px) {
           rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-title {
             font-size: 1.0em; } }
-      rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-button {
+      rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text learn-more-button {
         font-size: 0.8em;
         position: relative;
         top: 60%;
-        width: 32%;
+        width: 42%;
         margin: 0 auto;
-        background-color: #002e5a;
         line-height: 25px;
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease; }
         @media screen and (max-width: 785px) {
-          rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text .wp-refer-landing-videoplayer-button {
+          rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text learn-more-button {
             display: none; } }
-    rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text h2, rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text div {
+        rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text learn-more-button img {
+          margin-top: 5px; }
+    rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text h2, rl-mt-refer-landing videoplayer-selector .wp-refer-landing-videoplayer-text > div {
       position: absolute; }
-    rl-mt-refer-landing videoplayer-selector videoplayer-selector:hover .wp-refer-landing-videoplayer-button {
-      transform: scale(1.2);
-      -webkit-transform: scale(1.2); }
+    rl-mt-refer-landing videoplayer-selector videoplayer-selector:hover learn-more-button {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%); }
     rl-mt-refer-landing videoplayer-selector > div {
       position: relative;
       cursor: pointer;
       background-color: #000000;
       overflow: hidden; }
-    rl-mt-refer-landing videoplayer-selector img {
-      opacity: 0.45;
-      width: 100%;
-      z-index: 1;
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease; }
     rl-mt-refer-landing videoplayer-selector .selected {
       cursor: default; }
       rl-mt-refer-landing videoplayer-selector .selected * {
         cursor: default; }
-      rl-mt-refer-landing videoplayer-selector .selected .wp-refer-landing-videoplayer-button, rl-mt-refer-landing videoplayer-selector .selected .wp-refer-landing-videoplayer-title {
+      rl-mt-refer-landing videoplayer-selector .selected learn-more-button, rl-mt-refer-landing videoplayer-selector .selected .wp-refer-landing-videoplayer-title {
         opacity: 0; }
       rl-mt-refer-landing videoplayer-selector .selected img {
         opacity: 1; }
@@ -895,9 +885,10 @@ rl-mt-refer-landing {
       position: absolute;
       left: 490px;
       top: 325px;
-      width: 115px;
+      width: 135px;
       height: 30px;
-      opacity: 0; }
+      opacity: 0;
+      text-transform: uppercase; }
       @media screen and (max-width: 1366px) {
         rl-mt-refer-landing product-selector learn-more-button {
           transform: scale(1.5, 1.5);
@@ -966,8 +957,8 @@ rl-mt-refer-landing {
       position: relative; }
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product, rl-mt-refer-landing product-selector-nav .see-all {
       float: left;
-      width: 14.28571428571429%;
-      padding: 0 2px; }
+      width: 17.18%;
+      padding: 0 6px; }
       rl-mt-refer-landing product-selector-nav .wp-refer-landing-product img, rl-mt-refer-landing product-selector-nav .see-all img {
         width: 100%; }
     @media screen and (max-width: 820px) {
@@ -983,32 +974,27 @@ rl-mt-refer-landing {
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product:not(.selected) .wp-refer-landing-button {
       color: #898989; }
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-button {
+      font-family: Arial Black, Arial Bold, sans-serif;
+      font-weight: 200;
       margin-top: 10px;
-      height: 25px;
+      height: 50px;
+      border: 2px solid #002e5a;
       display: table;
-      color: #898989;
       width: 100%;
       -webkit-transition: all 0.2s ease;
       -moz-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
-      rl-mt-refer-landing product-selector-nav .wp-refer-landing-button .wp-refer-landing-button-circle {
-        width: 100%;
-        height: 18px;
-        margin-bottom: 10px; }
-        rl-mt-refer-landing product-selector-nav .wp-refer-landing-button .wp-refer-landing-button-circle div {
-          height: inherit;
-          width: 18px;
-          margin: 0 auto;
-          display: block;
-          background-color: #898989;
-          border-radius: 10px; }
       rl-mt-refer-landing product-selector-nav .wp-refer-landing-button p {
         width: 100%;
         line-height: 13px;
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: 400;
-        text-align: center; }
+        color: #002e5a;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase; }
       @media screen and (max-width: 820px) {
         rl-mt-refer-landing product-selector-nav .wp-refer-landing-button p {
           font-size: 0.9em;
@@ -1016,18 +1002,18 @@ rl-mt-refer-landing {
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product:hover > img {
       opacity: 0.75; }
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product:hover .wp-refer-landing-button {
-      color: #002e5a !important; }
+      color: #FFFFFF !important; }
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product:hover .wp-refer-landing-button-circle div {
-      background-color: #002e5a !important; }
+      background-color: #FFFFFF !important; }
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product.selected .wp-refer-landing-button {
-      color: #002e5a; }
-    rl-mt-refer-landing product-selector-nav .wp-refer-landing-product.selected .wp-refer-landing-button-circle div {
       background-color: #002e5a; }
+    rl-mt-refer-landing product-selector-nav .wp-refer-landing-product.selected .wp-refer-landing-button p {
+      color: #FFFFFF; }
     rl-mt-refer-landing product-selector-nav .see-all {
-      height: 190px;
+      height: 226px;
       width: 13%;
       margin-left: 1%;
-      color: #002e5a;
+      color: #959595;
       text-transform: uppercase;
       display: table;
       padding: 0;
@@ -1037,20 +1023,16 @@ rl-mt-refer-landing {
       transition: all 0.2s ease; }
       rl-mt-refer-landing product-selector-nav .see-all div {
         display: table;
-        width: 100px;
-        height: 100px;
-        border: 1px solid black;
-        border-radius: 130px;
-        margin-top: 38%;
-        margin-left: 10px;
+        width: 100%;
+        height: 100%;
+        border: 5px solid #959595;
         font-weight: 400; }
       rl-mt-refer-landing product-selector-nav .see-all p {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
-        text-align: center;
-        font-size: 1.3em;
-        line-height: 20px; }
+        font-size: 1.5em;
+        line-height: 26px; }
       @media screen and (max-width: 820px) {
         rl-mt-refer-landing product-selector-nav .see-all {
           clear: left;
@@ -1105,7 +1087,6 @@ rl-mt-refer-landing {
     height: 40px;
     margin-top: -20px;
     color: #FFFFFF;
-    background-color: #002e5a;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -1120,14 +1101,28 @@ rl-mt-refer-landing {
     rl-mt-refer-landing learn-more-button div {
       width: 100%;
       height: 100%;
-      display: table; }
+      display: table;
+      position: absolute;
+      z-index: 2; }
     rl-mt-refer-landing learn-more-button p {
       display: table-cell;
       vertical-align: middle;
-      text-align: center; }
+      text-transform: uppercase;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-weight: 800; }
+    rl-mt-refer-landing learn-more-button img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      margin-top: 1px; }
   rl-mt-refer-landing learn-more-button:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2); }
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%); }
   rl-mt-refer-landing more-features {
     padding: 0px 0 70px 0;
     overflow: hidden;
@@ -1193,8 +1188,9 @@ rl-mt-refer-landing {
       width: 100%; }
     rl-mt-refer-landing more-features-feature .bottom-text {
       text-align: center;
-      color: #000000;
-      margin-top: -5px; }
+      color: #6d6f71;
+      margin-top: -5px;
+      text-transform: uppercase; }
       @media screen and (max-width: 820px) {
         rl-mt-refer-landing more-features-feature .bottom-text {
           margin-top: 0px; } }
@@ -1203,9 +1199,9 @@ rl-mt-refer-landing {
     rl-mt-refer-landing banner img {
       width: 100%; }
     rl-mt-refer-landing banner learn-more-button {
-      top: 80%;
-      right: 38%;
-      width: 18%;
+      top: 54%;
+      right: 2%;
+      width: 15%;
       height: 34px;
       border-radius: 20px; }
       @media screen and (max-width: 685px) {

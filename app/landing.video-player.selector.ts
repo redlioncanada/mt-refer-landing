@@ -2,18 +2,20 @@ import {Component, View, Input, Output, EventEmitter} from 'angular2/core'
 import {Logger} from './services/logger.service'
 import {GoogleApi} from './services/googleapi.service'
 import {VideoPlayer} from './landing.video-player'
+import {LearnMoreButton} from './landing.learn-more.button'
 
 @Component({
 	selector: 'videoplayer-selector',
     template: `
     	<div (click)="select()" class="{{selected ? 'selected' : ''}}">
 			<div class="wp-refer-landing-videoplayer-text">
-				<div class="wp-refer-landing-videoplayer-title" [innerHtml]="data.ctaTitle"></div>
-				<div class="wp-refer-landing-videoplayer-button">{{data.cta}}</div>
+				<div class="wp-refer-landing-videoplayer-title subtitle" [innerHtml]="data.ctaTitle"></div>
+				<learn-more-button [text]="data.ctaText" [backgroundImage]="data.ctaBackground"></learn-more-button>
 			</div>
-			<img src="{{data.thumb}}" alt="{{data.alt}}"/>
+			<img class="wp-refer-landing-videoplayer-background" src="{{data.thumb}}" alt="{{data.alt}}"/>
 		</div>
-    `
+    `,
+    directives: [LearnMoreButton]
 })
 export class VideoPlayerSelector {
 	@Input() data
@@ -43,6 +45,7 @@ export class VideoPlayerSelector {
 	initialize(data) {
 		//assumes 1 result
 		data = data.items[0];
+		console.log(data)
 		this.data.desc = data.snippet.description.replace(/\\n/g, '');
 		this.ready = true
 	}

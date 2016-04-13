@@ -8,18 +8,20 @@ $subtitleColor: $accentColor;
 
 $features-copyColor: #898989;
 
-$videoPlayer-backgroundColor: #FFFFFF;
+$videoPlayer-backgroundColor: $accentColor;
 $videoPlayer-copyColor: #FFFFFF;
 $videoPlayer-descColor: $titleColor;
 
 $learnMoreTextColor: $linkColor;
 $learnMoreBackgroundColor: $accentColor;
 
-$moreFeaturesTitlesColor: #000000;
+$moreFeaturesTitlesColor: $titleColor;
 
 $selectorTextColor: #898989;
-$selectorHighlightedTextColor: $accentColor;
+$selectorHighlightedTextColor: $linkColor;
+$selectorHighlightedBackgroundColor: $accentColor;
 $selectorBackgroundColor: #000000;
+$selectorSeeAllColor: #959595;
 $selectorCTAColor: $accentColor;
 
 $moreFeaturesBackgroundColor: #000000;

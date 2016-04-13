@@ -10,8 +10,7 @@ import {InsertBreakPipe} from './insertBreak.pipe'
 			<div class="wp-refer-landing-product {{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i = index" (click)="select(product)">
 				<img src="{{product.prodImage}}"/>
 				<div class="wp-refer-landing-button">
-					<div class="wp-refer-landing-button-circle"><div></div></div>
-					<p [innerHtml]="product.prodName | insertBreak"></p>
+					<p [innerHtml]="product.prodName"></p>
 				</div>
 			</div>
 			<a target="_blank" href="{{ctaLink}}"><div class="see-all">

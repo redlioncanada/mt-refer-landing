@@ -10,7 +10,7 @@ videoplayer {
 	}
     
     h2.wp-refer-landing-videoplayer-title{
-    	@include header-text;
+    	color: #FFF !important;
          @media screen and (max-width: $mobileBreakpoint) {
                 font-size: 1em;
          }
@@ -18,33 +18,16 @@ videoplayer {
 
 	> ul {
 		overflow: hidden;
+		background-color: $videoPlayer-backgroundColor;
 
 		li {
 			float: left;
 			width: 33.333333333%;
-			padding: 0 5px;
+			padding-right:5px;
 		}
 
 		li:last-child {
 			padding-right: 0;
-		}
-
-		li:first-child {
-			padding-left: 0;
-		}
-
-		li:nth-child(2) img {
-			width: 101.5%;
-		}
-
-		li:nth-child(2) videoplayer-selector .wp-refer-landing-videoplayer-title {
-			margin-top: -65px;
-		}
-
-		@media screen and (max-width: $mobileBreakpoint) {
-			li:nth-child(2) videoplayer-selector .wp-refer-landing-videoplayer-title {
-				margin-top: -23px;
-			}
 		}
 	}
 }
@@ -91,6 +74,15 @@ videoplayer-player {
 
 videoplayer-selector {
 	width: 100%;
+	height: 309px;
+
+	> div {
+		height: inherit;
+	}
+
+	.wp-refer-landing-videoplayer-background {
+		width: 100%;
+	}
 
 	.wp-refer-landing-videoplayer-text {
 		height: 100%;
@@ -102,7 +94,7 @@ videoplayer-selector {
         }
 
 
-		.wp-refer-landing-videoplayer-title, .wp-refer-landing-videoplayer-button {
+		.wp-refer-landing-videoplayer-title, learn-more-button {
 			top: 50%;
 			text-align: center;
 			color: $videoPlayer-copyColor;
@@ -120,28 +112,31 @@ videoplayer-selector {
 	        }
 		}
 
-		.wp-refer-landing-videoplayer-button {
+		learn-more-button {
 			font-size: 0.8em;
 			position: relative;
 			top: 60%;
-			width: 32%;
+			width: 42%;
 			margin: 0 auto;
-			background-color: $accentColor;
 			line-height: 25px;
 			@include transition(0.2s);
             @media screen and (max-width: 785px) {
                 display: none;
             }
+
+            img {
+            	margin-top: 5px;
+            }
 		}
 	}
 
-	.wp-refer-landing-videoplayer-text h2, .wp-refer-landing-videoplayer-text div {
+	.wp-refer-landing-videoplayer-text h2, .wp-refer-landing-videoplayer-text > div {
 		position: absolute;
 	}
 
 	videoplayer-selector:hover {
-		.wp-refer-landing-videoplayer-button {
-			@include grow(1.2);
+		learn-more-button {
+			@include desaturate(100%);
 		}
 	}
 
@@ -152,13 +147,6 @@ videoplayer-selector {
 		overflow: hidden;
 	}
 
-	img {
-		opacity: 0.45;
-		width: 100%;
-		z-index: 1;
-		@include transition(0.2s);
-	}
-
 	.selected {
 		cursor: default;
 
@@ -166,7 +154,7 @@ videoplayer-selector {
 			cursor: default;
 		}
 
-		.wp-refer-landing-videoplayer-button, .wp-refer-landing-videoplayer-title {
+		learn-more-button, .wp-refer-landing-videoplayer-title {
 			opacity: 0;
 		}
 

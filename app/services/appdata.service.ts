@@ -23,7 +23,8 @@ export class AppData {
 				enabled: true,
 				link: 'http://www.whirlpool.ca/en_CA/everydaycare/',
 				image: './public/images/banner.jpg',
-				ctaText: 'Learn More'
+				ctaText: 'Learn More',
+				ctaBackground: './public/images/button-background.png'
 			},
 			features: {
 				enabled: true,
@@ -33,7 +34,8 @@ export class AppData {
 			            title: "Buying Guide",
 			            alt: "test",
 						desc: "What to look for when buying",
-			            cta: "Click Here",
+			            ctaText: "Click Here",
+						ctaBackground: "./public/images/button-background.png",
 						link: "http://blog.whirlpool.ca/whirlpool-refrigerator-buying-guide/",
 			            type: "cart"
 					},
@@ -42,7 +44,8 @@ export class AppData {
 			            title: "Ratings and Reviews",
 						alt: "test",
 			            desc: "See what others are saying",
-			            cta: "Click Here",
+			            ctaText: "Click Here",
+						ctaBackground: "./public/images/button-background.png",
 						link: "http://www.whirlpool.ca/en_CA/2_3_90/jump-pages_best-products.content.html",
 			            type: "star"
 					},
@@ -51,7 +54,8 @@ export class AppData {
 			        	title: "Find Your Maytag",
 						alt: "test",
 			        	desc: "Need help finding your refrigerator?",
-			        	cta: "Click Here",
+			        	ctaText: "Click Here",
+						ctaBackground: "./public/images/button-background.png",
 			        	link: "http://findmy.whirlpool.ca",
 			        	type: "magnifier"
 			    	}
@@ -64,7 +68,7 @@ export class AppData {
 					{
 						title: "Additional Accessories",
 						image: "./public/images/more-features-1.jpg",
-						link: "http://www.whirlpool.ca/en_CA/Accessories-1/Accessories_Kitchen_Accessories_Refrigerator-3/102280119/",
+						link: "https://www.google.ca/#q=placeholder",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -72,7 +76,7 @@ export class AppData {
 					{
 						title: "Water Filtration",
 						image: "./public/images/more-features-2.jpg",
-						link: "http://www.whirlpool.ca/en_CA/2_3_80/jump-pages_water-filters.content.html",
+						link: "https://www.google.ca/#q=placeholder",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -80,7 +84,7 @@ export class AppData {
 					{
 						title: "Certified Care",
 						image: "./public/images/more-features-3.jpg",
-						link: "https://whirlpoolcertifiedcare.ca/en",
+						link: "https://www.google.ca/#q=placeholder",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -89,98 +93,97 @@ export class AppData {
 			},
 			videoplayer: {
 				enabled: true,
-				title: "Must-See Innovation",
+				title: "Built Better",
 				videos: [
 					{
 						id: '8uqalJESFos',
 						thumb: './public/images/video-select-1.jpg',
-						title: 'Perfect Places<sup>&trade;</sup>',
+						title: 'Temperature Drawer',
 						alt: "test",
-						ctaTitle: 'Perfect Places<sup>&trade;</sup>',
-						cta: 'Play Video',
+						ctaTitle: 'Temperature Drawer',
+						ctaText: 'Watch Video',
+						ctaBackground: "./public/images/button-background.png",
 						desc: false
 					},
 					{
 						id: 'xI986ew0VD0',
 						thumb: './public/images/video-select-2.jpg',
-						title: 'Resource Saver<sup>&trade;</sup> & EasyView<sup>&trade;</sup>',
+						title: 'Four-door',
 						alt: "test",
-						ctaTitle: 'Resource Saver<sup>&trade;</sup> & EasyView<sup>&trade;</sup>',
-						cta: 'Play Video',
+						ctaTitle: 'Four-door',
+						ctaText: 'Watch Video',
+						ctaBackground: "./public/images/button-background.png",
 						desc: false,
 					},
 					{
 						id: 'j-SeXWbpEaw',
 						thumb: './public/images/video-select-3.jpg',
-						title: 'StoreRight<sup>&trade;</sup> System',
+						title: '10-Year Warranty',
 						alt: "test",
-						ctaTitle: 'StoreRight<sup>&trade;</sup> System',
-						cta: 'Play Video',
+						ctaTitle: '10-Year Warranty',
+						ctaText: 'Watch Video',
+						ctaBackground: "./public/images/button-background.png",
 						desc: false
 					}
 				]
 			},
 			productselector: {
 				enabled: true,
-				title: 'Choose Your Style',
+				title: 'Choose Your Configuration',
 				nav: {
 					text: 'See<br/>All',
 					link: 'http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back'
 				},
 				products: [
 					{
-						image: "./public/images/products/double-drawer.png",
-                        title: "Double Drawer",
+						image: "./public/images/products/four-door.png",
+                        title: "Four-door",
                         alt: "test",
-                        desc: "Get even more organized with our versatile Double Drawer refrigerator, designed with your family's needs in mind. This unique style offers 9 storage zones with our PerfectPlaces™ System, including our temperature-controlled drawer and small items bin.",
-                        link: "http://www.whirlpool.ca/en_CA/kitchen-1/refrigeration-2/refrigerators-3/-[WRV986FDEM]-5552596/WRV986FDEM/",
-                        id: "double-drawer",
-                        ctaText: "Learn More"
+                        desc: "There’s getting organized, and then there’s getting organized your way. Thanks to the adjustable- temperature refrigerated drawer and EasySlide bin, you can store everything you need exactly the way you want to. Plus, the 4- door fridge’s premium design will keep it looking great on the outside, too.",
+                        link: "https://www.google.ca/#q=placeholder",
+                        id: "four-door",
+                        ctaText: "Learn More",
+                        ctaBackground: "./public/images/button-background.png"
                     },
 					{
             			image: "./public/images/products/french-door.png",
                         title: "French Door",
                         alt: "test",
-                        desc: "Our French Door refrigerators offer the flexible organization and convenience to keep your fresh foods at eye level and easily store your frozen favourites. The premium look and optimal capacity make these refrigerators an ideal piece for your family's kitchen.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/",
+                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        link: "https://www.google.ca/#q=placeholder",
                         id: "french-door",
-                        ctaText: "Learn More"
+                        ctaText: "Learn More",
+                        ctaBackground: "./public/images/button-background.png"
                     },
             		{
 						image: "./public/images/products/side-by-side.png",
                         title: "Side-by-Side",
                         alt: "test",
-                        desc: "Learn all the ways more door bin space makes it easy for your family to organize and access items big or small. This classic style offers a great balance of space for both fresh and frozen foods with the flexibility for different size options.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110369/",
+                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        link: "https://www.google.ca/#q=placeholder",
                         id: "side-by-side",
-                        ctaText: "Learn More"
+                        ctaText: "Learn More",
+                        ctaBackground: "./public/images/button-background.png"
                     },
             		{
 						image: "./public/images/products/bottom-freezer.png",
-                        title: "Bottom Freezer",
+                        title: "Bottom-Freezer",
                         alt: "test",
-                        desc: "See how convenient it is to reach fresh foods and after-school snacks on the go. You have the option of pull-out drawer or swing-door style freezers, plus a variety of sizes to fit any space in your home.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110370/",
+                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        link: "https://www.google.ca/#q=placeholder",
                         id: "bottom-freezer",
-                        ctaText: "Learn More"
+                        ctaText: "Learn More",
+                        ctaBackground: "./public/images/button-background.png"
                     },
                     {
 						image: "./public/images/products/top-freezer.png",
-                        title: "Top Freezer",
+                        title: "Top-Freezer",
                         alt: "test",
-                        desc: "There's always a place for fresh and frozen favourites inside this simple, classic style. Our Top Freezer refrigerator offers great quality and value and is available in smaller sizes for use as second one when you need the extra space.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110371/",
+                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        link: "https://www.google.ca/#q=placeholder",
                         id: "top-freezer",
-                        ctaText: "Learn More"
-                    },
-            		{
-						image: "./public/images/products/freezer.png",
-                        title: "Freezers",
-                        alt: "test",
-                        desc: "See all the extra storage for frozen foods, from pizza to popsicles. Our chest and upright styles ensure the perfect fit for any home.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Freezers-3/102280030/",
-                        id: "freezers",
-                        ctaText: "Learn More"
+                        ctaText: "Learn More",
+                        ctaBackground: "./public/images/button-background.png"
                     }
 				]
 			}
