@@ -7,8 +7,8 @@ import {Logger} from './services/logger.service'
     selector: 'more-features',
     template: `
     	<div class="row {{!enabled ? 'hide' : ''}}">
-			<h2 class="subtitle">{{title}}</h2>
-		    <more-features-feature *ngFor="#feature of moreFeatures; #i=index" [cta]="feature.cta" [text]="feature.text" [link]="feature.link" [title]="feature.title" [image]="feature.image" [alt]="feature.alt">
+			<h2 class="rl-mt-refer-landing-subtitle">{{title}}</h2>
+		    <more-features-feature *ngFor="#feature of moreFeatures; #i=index" [cta]="feature.cta" [text]="feature.text" [analytics]="feature.analytics" [link]="feature.link" [title]="feature.title" [image]="feature.image" [alt]="feature.alt">
 		    </more-features-feature>
 		</div>
     `,

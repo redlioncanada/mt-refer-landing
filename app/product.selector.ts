@@ -9,16 +9,17 @@ import {ProductModel} from './models/products.model'
     template: `
         <div class="row" class="{{!enabled ? 'hide' : ''}}">
             <div>
-                <h2 class="subtitle">{{title}}</h2>
+                <h2 class="rl-mt-refer-landing-subtitle">{{title}}</h2>
             </div>
-            <product-slides [products]="products" [selectedProduct]="selectedProduct" (isAnimating)="isAnimating($event)"></product-slides>
-            <product-selector-nav [products]="products" [selectedProduct]="selectedProduct" (productSelected)="productSelected($event)"></product-selector-nav>
+            <product-slides [products]="slidesProducts" [selectedProduct]="selectedProduct" (isAnimating)="isAnimating($event)"></product-slides>
+            <product-selector-nav [products]="selectorProducts" [selectedProduct]="selectedProduct" (productSelected)="productSelected($event)"></product-selector-nav>
         </div>
     `,
     directives: [ProductSlides, ProductSelectorNav],
 })
 export class ProductSelector {
-    public products: [ProductModel];
+    public selectorProducts: [ProductModel];
+    public slidesProducts: [ProductModel];
     public selectedProduct: ProductModel;
     public animating: Boolean;
     private title: string;
@@ -30,11 +31,12 @@ export class ProductSelector {
 
         this.enabled = data.productselector.enabled
         this.title = data.productselector.title
-		this.products = []
+        this.selectorProducts = []
+        this.slidesProducts = []
         for (var i in data.productselector.products) {
             var product = data.productselector.products[i]
 
-            this.products.push(
+            this.selectorProducts.push(
                 new ProductModel(
                     product.image,
                     product.title,
@@ -43,12 +45,31 @@ export class ProductSelector {
                     product.id,
                     product.ctaText,
                     product.alt,
-                    product.ctaBackground
+                    product.ctaBackground,
+                    product.analytics
+                )
+            )
+
+            this.slidesProducts.push(
+                new ProductModel(
+                    product.image,
+                    product.title,
+                    product.desc,
+                    product.link,
+                    product.id,
+                    product.ctaText,
+                    product.alt,
+                    product.ctaBackground,
+                    {
+                        category: product.analytics.category,
+                        action: product.analytics.action,
+                        label: product.analytics.label + ' ' + product.analytics.learnMore
+                    }
                 )
             )
         }
 
-		this.selectedProduct = this.products[0];
+		this.selectedProduct = this.slidesProducts[0];
 		this.animating = false;
     }
 

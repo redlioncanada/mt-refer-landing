@@ -1,5 +1,3 @@
-/// <reference path="../typings/greensock/greensock.d.ts" />
-
 export class TimelineController {
 	protected timeline: TimelineMax;
     protected tweenThis: TimelineMax;

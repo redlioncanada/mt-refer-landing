@@ -1,15 +1,15 @@
 @mixin Akzidenz() {
-	font-family: 'Akzidenz', Arial, sans-serif;
+	font-family: 'Akzidenz', Arial, sans-serif !important;
 	font-weight: 200;
 }
 
 @mixin Akzidenz-Medium() {
-	font-family: 'Akzidenz', Arial, sans-serif;
+	font-family: 'Akzidenz', Arial, sans-serif !important;
 	font-weight: 400;
 }
 
 @mixin Akzidenz-Bold() {
-	font-family: 'Akzidenz', Arial, sans-serif;
+	font-family: 'Akzidenz', Arial, sans-serif !important;
 	font-weight: 800;
 }
 

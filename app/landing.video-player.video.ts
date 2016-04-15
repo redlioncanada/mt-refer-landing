@@ -1,6 +1,8 @@
 import {Component, Input} from 'angular2/core'
 import {Logger} from './services/logger.service'
 
+declare var YT;
+
 @Component({
 	selector: 'videoplayer-video',
     template: `

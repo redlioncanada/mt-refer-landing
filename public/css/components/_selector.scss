@@ -36,7 +36,6 @@ product-selector {
         display: inline-block;
         position: relative;
         top: -170px;
-        left: -470px; //I dunno
 
         @media screen and (max-width: $mobileBreakpoint) {
             position: absolute;
@@ -110,13 +109,6 @@ product-selector {
         height: 30px;
         opacity: 0;
         text-transform: uppercase;
-
-        @media screen and (max-width: 1366px) {
-           transform: scale(1.5,1.5);
-           -webkit-transform: scale(1.5,1.5);
-           left: 515px;
-           font-size: .7em;
-        }
 
         @media screen and (max-width: $mobileBreakpoint) {
             @include mobile-block-element;
@@ -249,11 +241,11 @@ product-selector-nav {
         }
 
         .wp-refer-landing-button {
-            color: $selectorHighlightedTextColor !important;
+            background-color: $selectorHighlightedBackgroundColor !important;
         }
 
-        .wp-refer-landing-button-circle div {
-            background-color: $selectorHighlightedTextColor !important;
+        .wp-refer-landing-button p {
+            color: $selectorHighlightedTextColor !important;
         }
     }
 
@@ -277,6 +269,14 @@ product-selector-nav {
         padding: 0;
         @include transition(0.2s);
 
+        &:hover {
+            background-color: $selectorHighlightedBackgroundColor;
+
+            p {
+                color: $selectorHighlightedTextColor;
+            }
+        }
+
         div {
             display: table;
             width: 100%;
@@ -289,6 +289,7 @@ product-selector-nav {
             @include centered-table-cell;
             font-size: 1.5em;
             line-height: 26px;
+            font-weight: 600;
         }
 
         @media screen and (max-width: $mobileBreakpoint) {

@@ -1,32 +1,38 @@
-import {Component, View, Input, Output, EventEmitter} from 'angular2/core'
+import {Component, Input, Output, EventEmitter, ElementRef} from 'angular2/core'
 import {Logger} from './services/logger.service'
 import {GoogleApi} from './services/googleapi.service'
 import {VideoPlayer} from './landing.video-player'
 import {LearnMoreButton} from './landing.learn-more.button'
+import {AnalyticsOn} from './analytics.directive'
+
+declare var $: JQueryStatic;
 
 @Component({
 	selector: 'videoplayer-selector',
     template: `
-    	<div (click)="select()" class="{{selected ? 'selected' : ''}}">
+    	<div (click)="select()" class="{{selected ? 'selected' : ''}}" analyticsOn="click" analyticsCategory="{{data.analytics.category}}" analyticsAction="{{data.analytics.action}}" analyticsLabel="{{data.analytics.label}}">
 			<div class="wp-refer-landing-videoplayer-text">
-				<div class="wp-refer-landing-videoplayer-title subtitle" [innerHtml]="data.ctaTitle"></div>
+				<div class="wp-refer-landing-videoplayer-title rl-mt-refer-landing-subtitle" [innerHtml]="data.ctaTitle"></div>
 				<learn-more-button [text]="data.ctaText" [backgroundImage]="data.ctaBackground"></learn-more-button>
 			</div>
 			<img class="wp-refer-landing-videoplayer-background" src="{{data.thumb}}" alt="{{data.alt}}"/>
 		</div>
     `,
-    directives: [LearnMoreButton]
+    directives: [LearnMoreButton, AnalyticsOn]
 })
 export class VideoPlayerSelector {
 	@Input() data
 	@Input() id
 	@Input() selected
 	@Output() selectedVideo = new EventEmitter()
+	init: boolean
 	ready: boolean
+	_renderInterval: any
 
-	constructor(private logger: Logger, private api: GoogleApi) {
+	constructor(private logger: Logger, private api: GoogleApi, private elementRef: ElementRef) {
 		this.ready = false
 		this.selected = false
+		this.init = false
 	}
 
 	ngOnInit() {
@@ -42,10 +48,14 @@ export class VideoPlayerSelector {
 		}
 	}
 
+	ngAfterViewInit() {
+		let self = this
+		this.init = true
+	}
+
 	initialize(data) {
 		//assumes 1 result
 		data = data.items[0];
-		console.log(data)
 		this.data.desc = data.snippet.description.replace(/\\n/g, '');
 		this.ready = true
 	}

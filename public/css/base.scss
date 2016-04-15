@@ -39,7 +39,7 @@ rl-mt-refer-landing {
 	font-size: 12pt;
 	position: relative;
 	display: block;
-	margin-top: 118px;
+	margin-top: 40px;
 
 	h1,h2,h3,h4,h5,[class*='title'] {
 		color: $titleColor !important;
@@ -49,7 +49,7 @@ rl-mt-refer-landing {
 		@include Akzidenz;
 	}
 
-	.subtitle {
+	.rl-mt-refer-landing-subtitle {
 		color: $subtitleColor !important;
 	}
 

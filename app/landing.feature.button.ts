@@ -1,15 +1,13 @@
-/// <reference path="../typings/jquery/jquery.d.ts" />
-/// <reference path="../typings/greensock/greensock.d.ts" />
-import {bootstrap}    from 'angular2/platform/browser'
 import {Component, Input, Inject, ElementRef} from 'angular2/core'
 import {TimelineController} from './landing.timeline-controller'
+import {AnalyticsOn} from './analytics.directive'
 
 declare var $: JQueryStatic;
 
 @Component({
     selector: 'feature-button',
     template: `
-        <a href="{{btnLink}}">
+        <a href="{{btnLink}}" analyticsOn="click" analyticsCategory="{{analytics.category}}" analyticsAction="{{analytics.action}}" analyticsLabel="{{analytics.label}}">
             <div class="mt-landing-feature-button" >
                 <div class="mt-landing-feature-button-up">
                     <div class="mt-landing-feature-icon mt-landing-innerBtn"><img class="{{btnType}}" src={{btnIcon}} alt="{{btnAlt}}" /></div>
@@ -30,6 +28,7 @@ declare var $: JQueryStatic;
             </div>
         </a>
     `,
+    directives: [AnalyticsOn]
 })
 
 export class FeatureButton extends TimelineController {
@@ -40,6 +39,7 @@ export class FeatureButton extends TimelineController {
     @Input() btnLink
     @Input() btnType
     @Input() btnAlt
+    @Input() analytics
 
     private rootElement;
     private elementRef: ElementRef;
@@ -48,10 +48,9 @@ export class FeatureButton extends TimelineController {
     private targetHeight;
 
     public constructor(@Inject(ElementRef) elementRef: ElementRef) {
+        super()
         this.elementRef = elementRef
         this.rootElement = $(this.elementRef.nativeElement)
-
-        super()
     }
     
     public playAnimations(bType:string){

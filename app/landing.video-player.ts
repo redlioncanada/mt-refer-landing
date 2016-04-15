@@ -7,7 +7,7 @@ import {AppData} from './services/appdata.service'
 @Component({
     selector: 'videoplayer',
     template: `
-    	<h2 class="{{!enabled ? 'hide': ''}} subtitle">{{title}}</h2>
+    	<h2 class="{{!enabled ? 'hide': ''}} rl-mt-refer-landing-subtitle">{{title}}</h2>
 		<videoplayer-player class="{{!enabled ? 'hide': ''}}" [data]="videos" [currentId]="currentId"></videoplayer-player>
 		<ul class="{{!enabled ? 'hide': ''}}">
 			<li *ngFor="#video of videos; #i=index">

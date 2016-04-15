@@ -8,7 +8,7 @@ import {Logger} from './services/logger.service'
     template: `
     <div class="{{!enabled ? 'hide': ''}}">
 		<img src="{{image}}"/>
-		<learn-more-button [link]="link" [text]="ctaText" [backgroundImage]="ctaBackground"></learn-more-button>
+		<learn-more-button [analytics]="analytics" [link]="link" [text]="ctaText" [backgroundImage]="ctaBackground"></learn-more-button>
 	</div>
     `,
     directives: [LearnMoreButton],
@@ -19,6 +19,7 @@ export class Banner {
 	private link: string
 	private image: string
 	private enabled: boolean
+	private analytics: Object
 
 	constructor(private appdata: AppData, private logger: Logger) {
 		this.enabled = true
@@ -28,5 +29,6 @@ export class Banner {
 		this.image = data.banner.image
 		this.ctaText = data.banner.ctaText
 		this.ctaBackground = data.banner.ctaBackground
+		this.analytics = data.banner.analytics
 	}
 }

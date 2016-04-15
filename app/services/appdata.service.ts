@@ -24,46 +24,66 @@ export class AppData {
 				link: 'http://www.whirlpool.ca/en_CA/everydaycare/',
 				image: './public/images/banner.jpg',
 				ctaText: 'Learn More',
-				ctaBackground: './public/images/button-background.png'
+				ctaBackground: './public/images/button-background.png',
+				analytics: {
+					category: "@category",
+					action: "Clicked Bottom Banner",
+					label: "Every Day Care-Learn More"
+				}
 			},
 			features: {
 				enabled: true,
 				features: [
-			        {
-			        	image: "./public/images/refer-landing-shopping-cart.png",
-			            title: "Buying Guide",
-			            alt: "test",
-						desc: "What to look for when buying",
-			            ctaText: "Click Here",
-						ctaBackground: "./public/images/button-background.png",
-						link: "http://blog.whirlpool.ca/whirlpool-refrigerator-buying-guide/",
-			            type: "cart"
-					},
-			        {
-			        	image: "./public/images/refer-landing-star.png",
-			            title: "Ratings and Reviews",
+					{
+						image: "./public/images/refer-landing-shopping-cart.png",
+						title: "Buying Guide",
 						alt: "test",
-			            desc: "See what others are saying",
-			            ctaText: "Click Here",
+						desc: "What to look for when buying",
+						ctaText: "Click Here",
 						ctaBackground: "./public/images/button-background.png",
-						link: "http://www.whirlpool.ca/en_CA/2_3_90/jump-pages_best-products.content.html",
-			            type: "star"
+						link: "https://www.google.ca/#q=placeholder",
+						type: "cart",
+						analytics: {
+							category: "@category",
+							action: "Clicked Refer Resources",
+							label: "Buying Guide"
+						}
 					},
 					{
-			        	image: "./public/images/refer-landing-mag-glass.png",
-			        	title: "Find Your Maytag",
+						image: "./public/images/refer-landing-star.png",
+						title: "Ratings and Reviews",
 						alt: "test",
-			        	desc: "Need help finding your refrigerator?",
-			        	ctaText: "Click Here",
+						desc: "See what others are saying",
+						ctaText: "Click Here",
 						ctaBackground: "./public/images/button-background.png",
-			        	link: "http://findmy.whirlpool.ca",
-			        	type: "magnifier"
-			    	}
+						link: "https://www.google.ca/#q=placeholder",
+						type: "star",
+						analytics: {
+							category: "@category",
+							action: "Clicked Refer Resources",
+							label: "Ratings and Reviews"
+						}
+					},
+					{
+						image: "./public/images/refer-landing-mag-glass.png",
+						title: "Find Your Maytag",
+						alt: "test",
+						desc: "Need help finding your refrigerator?",
+						ctaText: "Click Here",
+						ctaBackground: "./public/images/button-background.png",
+						link: "http://findmy.maytag.ca",
+						type: "magnifier",
+						analytics: {
+							category: "@category",
+							action: "Clicked Refer Resources",
+							label: "Find Your MT"
+						}
+					}
 				]
 			},
 			morefeatures: {
 				enabled: true,
-				title: "Additional Features",
+				title: "Get More From Your Refrigerator",
 				features: [
 					{
 						title: "Additional Accessories",
@@ -96,34 +116,49 @@ export class AppData {
 				title: "Built Better",
 				videos: [
 					{
-						id: '8uqalJESFos',
+						id: 'u8rBThh8bPo',
 						thumb: './public/images/video-select-1.jpg',
 						title: 'Temperature Drawer',
 						alt: "test",
 						ctaTitle: 'Temperature Drawer',
 						ctaText: 'Watch Video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: false
+						desc: "Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "Temperature Drawer"
+						}
 					},
 					{
-						id: 'xI986ew0VD0',
+						id: 'Fm_-PxETMUA',
 						thumb: './public/images/video-select-2.jpg',
 						title: 'Four-door',
 						alt: "test",
 						ctaTitle: 'Four-door',
 						ctaText: 'Watch Video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: false,
+						desc: "Providing your family with fresh, healthy food is one of your strengths and Maytag's too. That's why Maytag's 4-door refrigerator sets a bold new standard for refrigeration. With advanced features and unmatched durability to keep your food chilled properly - from the first grape to the last - and when it comes to cooling, this powerful Maytag® Refrigerator is made to hold the cold. It's Dual Cool Evaporators have an evaporator dedicated to each compartment which generate ideal humidity levels in both the freezer and the refrigerator so all your food stays at it's best. And, with Maytag's 10 year limited parts warranty on the compressor, you can count on it to hold the cold for years. Maytag's patented door seal design helps lock in cold air but if things get heated, your coolness won't be compromised. Power Cold™ quickly chills down the refrigerator with the touch of a button to keep everything fresh and tasty. Just like you, the Maytag® Refrigerator keeps things running smoothly with smooth sliding premium glides and rollers. Maytag® Steel Shelves are cold to the touch and ruggedly reliable with under-shelf LED lighting that gives you light everywhere you need it. Maytag's Store-N-Door ice dispensing system and sturdy gallon door bins help to utilize every inch of your refrigerator.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "Four-door"
+						}
 					},
 					{
-						id: 'j-SeXWbpEaw',
+						id: 'OSgIUSI1ZkE',
 						thumb: './public/images/video-select-3.jpg',
 						title: '10-Year Warranty',
 						alt: "test",
 						ctaTitle: '10-Year Warranty',
 						ctaText: 'Watch Video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: false
+						desc: "At Maytag, we don't just tell you our refrigerators are made for the long haul, we're so confident in our product that we've added a 10 year limited parts warranty on select parts to back them up. Our warranty on the compressor covers the heart of the refrigerator, so you know you can count on it to hold the cold for years.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "10-Year Warranty"
+						}
 					}
 				]
 			},
@@ -132,7 +167,12 @@ export class AppData {
 				title: 'Choose Your Configuration',
 				nav: {
 					text: 'See<br/>All',
-					link: 'http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back'
+					link: 'http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back',
+					analytics: {
+						category: "@category",
+						action: "Clicked Choose Your Refer Configuration",
+						label: "See all Refer"
+					}
 				},
 				products: [
 					{
@@ -143,47 +183,77 @@ export class AppData {
                         link: "https://www.google.ca/#q=placeholder",
                         id: "four-door",
                         ctaText: "Learn More",
-                        ctaBackground: "./public/images/button-background.png"
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Four-door",
+							learnMore: 'Learn More'
+						}
                     },
 					{
-            			image: "./public/images/products/french-door.png",
+						image: "./public/images/products/french-door.png",
                         title: "French Door",
                         alt: "test",
-                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        desc: "Optimal capacity. Flexible organization. They’re not just words: they’re what make a French Door fridge more convenient to use than ever. That means keeping your fresh foods at eye level and easily storing your frozen favourites. Plus, its premium design looks great in any kitchen.",
                         link: "https://www.google.ca/#q=placeholder",
                         id: "french-door",
                         ctaText: "Learn More",
-                        ctaBackground: "./public/images/button-background.png"
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "French Door",
+							learnMore: 'Learn More'
+						}
                     },
-            		{
+					{
 						image: "./public/images/products/side-by-side.png",
                         title: "Side-by-Side",
                         alt: "test",
-                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        desc: "Classic style made to fit your space, big or small. More door bin space means you can easily store and access food items. Plus, it’s designed to maximize your ability to store both fresh and frozen foods. A range of different sizing options are available.",
                         link: "https://www.google.ca/#q=placeholder",
                         id: "side-by-side",
                         ctaText: "Learn More",
-                        ctaBackground: "./public/images/button-background.png"
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Side-by-side",
+							learnMore: 'Learn More'
+						}
                     },
-            		{
+					{
 						image: "./public/images/products/bottom-freezer.png",
                         title: "Bottom-Freezer",
                         alt: "test",
-                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        desc: "Accessing fresh food items doesn’t get easier than this. Bottom-freezer refrigerators keep everything you need at eye-level, so you don’t have to go searching when you’re in a hurry. Now that’s convenience.",
                         link: "https://www.google.ca/#q=placeholder",
                         id: "bottom-freezer",
                         ctaText: "Learn More",
-                        ctaBackground: "./public/images/button-background.png"
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Bottom-Freezer",
+							learnMore: 'Learn More'
+						}
                     },
                     {
 						image: "./public/images/products/top-freezer.png",
                         title: "Top-Freezer",
                         alt: "test",
-                        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum dapibus mattis. Sed vel egestas dui. Nam faucibus dapibus aliquam. Ut metus enim, venenatis ac justo egestas, egestas lacinia sapien. Pellentesque dignissim eros leo, vel elementum lectus fringilla vel.",
+                        desc: "Quality, meet value. With a top-freezer refrigerator, there’s always a place to store fresh and frozen foods. Plus, they’re available in smaller sizes, so you can use a second one when you need the extra space. You’re right, that is a good idea.",
                         link: "https://www.google.ca/#q=placeholder",
                         id: "top-freezer",
                         ctaText: "Learn More",
-                        ctaBackground: "./public/images/button-background.png"
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Top-Freezer",
+							learnMore: 'Learn More'
+						}
                     }
 				]
 			}
@@ -373,8 +443,21 @@ export class AppData {
 		return this.contents[this.language];
 	}
 
+	applyText(obj) {
+		if (!(this.language in this.contents)) {
+			this.logger.error('Language does not exist')
+		}
+
+		if (obj.name in this.contents[this.language]) {
+			for (var i in this.contents[this.language][obj.name]) {
+				obj[i] = this.contents[this.language][i]
+			}
+		}
+	}
+
 	getLanguage() {
 		var url = window.location.href
 		if (url.indexOf('/fr_CA') > -1) return 'fr'
 		return 'en'
 	}
+}

@@ -1,5 +1,4 @@
-/// <reference path="../typings/jquery/jquery.d.ts" />
-import {Component} from 'angular2/core';
+import {Component, ElementRef} from 'angular2/core';
 import {AppData} from './services/appdata.service'
 
 declare var $: JQueryStatic;
@@ -13,6 +12,7 @@ declare var $: JQueryStatic;
 				<img src="{{image}}" alt="{{alt}}" />
 				<img src="{{imageForeground}}" alt="{{alt}}" />
 			</div>
+			<img class="mt-landing-light" src="./public/images/light.png" />
 		</div>
     `
 })
@@ -22,9 +22,11 @@ export class AppMasthead {
 	private title: string
 	private enabled: boolean
 	private alt: string
+	private element: any
 
-	constructor(private appdata: AppData) {
+	constructor(private appdata: AppData, private _elementRef: ElementRef) {
 		this.enabled = true
+		this.element = _elementRef.nativeElement
 		var data = appdata.get()
 
 		this.enabled = data.masthead.enabled
@@ -35,8 +37,16 @@ export class AppMasthead {
 	}
 
 	ngAfterViewInit() {
+		var self = this
+
 		setTimeout(function() {
-			$('masthead .mt-landing-image').addClass('fade-in')
-		}, 1000)
+			$(self.element).find('.mt-landing-image img').last().animate({ opacity: 1 }, { duration: 350, queue: false })
+			$(self.element).find('.mt-landing-light').animate({ bottom: '70%' }, { duration: 300, queue: false, complete: function() {
+				var self1 = this
+				setTimeout(function() {
+					$(self1).animate({ opacity: 0 }, { duration: 100, queue: false })
+				}, 200)
+			}});
+		}, 4000)
 	}
 }

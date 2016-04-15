@@ -35,6 +35,7 @@ gulp.task('cuat', ['packNodeModules'], function() {
 
 	tasks.push(gulp.src('./public/css/**/*.css')
 		.pipe(replace('../fonts/', ''))
+		.pipe(replace('/public/fonts/', '/css/'+base+'/'))
 		.pipe(replace('../images/', '/images/'+base+'/'))
 		.pipe(replace('../../public/images/', '/images/'+base+'/'))
 		.pipe(gulp.dest('./cuat/css/'+base+'/')))

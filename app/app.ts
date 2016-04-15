@@ -4,6 +4,7 @@ import {HTTP_PROVIDERS} from 'angular2/http'
 import {Logger} from './services/logger.service'
 import {GoogleApi} from './services/googleapi.service'
 import {AppData} from './services/appdata.service'
+import {Analytics} from './services/analytics.service'
 import {Component} from 'angular2/core';
 
 import {VideoPlayer} from './landing.video-player';
@@ -31,9 +32,17 @@ import {Footer} from './landing.footer'
 class AppComponent {
 	public language: string;
 
-    constructor(private appdata: AppData) {
+    constructor(private appdata: AppData, analytics: Analytics) {
     	this.language = appdata.language
+    	
+    	analytics.bind('language', function(str) {
+    		return window.location.href.indexOf('fr_CA/') > -1 ? 'FR' : 'EN'
+    	})
+        analytics.bind('category', function(str) {
+            return 'Refer Landing Page'
+        })
+        analytics.debugMode(true)
     }
  }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, Logger, GoogleApi, AppData])
+bootstrap(AppComponent, [HTTP_PROVIDERS, Logger, GoogleApi, AppData, Analytics])

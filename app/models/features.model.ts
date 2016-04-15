@@ -6,6 +6,7 @@ export class FeatureModel{
                 public btnRollOverCTA: string = "",
                 public btnLink: string = "",
                 public btnType: string = "",
-                public btnAlt:string = ""
+                public btnAlt:string = "",
+                public analytics: Object = {}
                 ){}
 }

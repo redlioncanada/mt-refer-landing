@@ -1,4 +1,3 @@
-import {bootstrap}    from 'angular2/platform/browser'
 import {Component, Input, Inject, ElementRef} from 'angular2/core'
 
 declare var $: JQueryStatic;
@@ -20,8 +19,7 @@ declare var $: JQueryStatic;
 			</div>
 			<p class="bottom-text">{{title}}</p>
 		</div></a>
-    `,
-
+    `
 })
 export class MoreFeaturesFeature {
     @Input() image
@@ -30,4 +28,5 @@ export class MoreFeaturesFeature {
     @Input() text
     @Input() cta
     @Input() alt
+    @Input() analytics
 }

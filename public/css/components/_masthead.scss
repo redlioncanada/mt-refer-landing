@@ -2,7 +2,7 @@ masthead {
 	width: 80%;
 	position: relative;
 	display: block;
-	padding-top: 20px;
+    overflow: hidden;
 
     @media screen and (max-width: $mobileBreakpoint) {
         padding-top: initial;
@@ -13,6 +13,7 @@ masthead {
         overflow: hidden;
         cursor: default;
         margin-bottom: 20px;
+        z-index: 1;
 
         img:first-child {
             z-index: 1;
@@ -23,6 +24,7 @@ masthead {
             z-index: 2;
             opacity: 0;
             top: 0;
+            left: 0;
         }
 
         @media screen and (min-width: 768px) and  (max-width: 1275px){
@@ -30,21 +32,16 @@ masthead {
         }
     }
 
-    .mt-landing-image.fade-in {
-        img:last-child {
-            opacity: 1;
-        }
+    .mt-landing-light {
+        position: absolute;
+        width: 30%;
+        right: 7%;
+        bottom: -20%;
+        z-index: 2;
     }
 
     img{
         width: 100%;
-        @media screen and (min-width: 768px) and  (max-width: 1275px){
-                 width: 75%;
-                margin: auto;
-                position: absolute;
-                left: 0px;
-                right: 0px;
-        }
         @include transition(0.5s);
     }
 
@@ -53,18 +50,11 @@ masthead {
             text-transform: uppercase;
             font-weight: 100;
             font-size: 32px;
-            letter-spacing: 1px;
-            margin-top: 125px;
-            @media screen and (max-width: 1275px) {
-                position: relative;
-                left: 12.5%;
-            }
-            
+
             @media screen and (max-width: 768px) {
                 text-align: center;
                 padding-bottom: 10px;
                 left: 0;
-                
             }
         }
     }

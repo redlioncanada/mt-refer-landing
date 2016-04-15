@@ -7,7 +7,7 @@ import {AppData} from './services/appdata.service'
     selector: 'features',
     template: `
         <div class="row {{!enabled ? 'hide': ''}}">
-            <feature-button *ngFor="#feature of featureButtons; #i=index" [timeline]="feature.timeline" [btnIcon]= "feature.btnIcon" [btnTitle]= "feature.btnTitle" [btnRollOverCopy]="feature.btnRollOverCopy" [btnRollOverCTA]="feature.btnRollOverCTA" [btnAlt]="feature.btnAlt" [btnType]="feature.btnType" [btnLink]="feature.btnLink">
+            <feature-button *ngFor="#feature of featureButtons; #i=index" [timeline]="feature.timeline" [analytics]="feature.analytics" [btnIcon]= "feature.btnIcon" [btnTitle]= "feature.btnTitle" [btnRollOverCopy]="feature.btnRollOverCopy" [btnRollOverCTA]="feature.btnRollOverCTA" [btnAlt]="feature.btnAlt" [btnType]="feature.btnType" [btnLink]="feature.btnLink">
 
             </feature-button>
         </div>
@@ -34,7 +34,8 @@ export class Features {
                     feature.ctaText,
                     feature.link,
                     feature.type,
-                    feature.alt
+                    feature.alt,
+                    feature.analytics
                 )
             )
         }
