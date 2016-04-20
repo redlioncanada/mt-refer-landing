@@ -51,7 +51,7 @@ export class ProductSlides {
         )
     }
 
-    private onBreakpointChange(breakpoint) {
+    private onBreakpointChange(evt) {
       var target = this.selectedProduct.prodId
       this.playIn(this, true, target)
     }

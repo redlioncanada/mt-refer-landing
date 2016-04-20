@@ -5,8 +5,8 @@ import {LearnMoreButton} from './landing.learn-more.button'
     selector: 'product-slide',
     template: `
         <div id="{{fridgeId}}" class="rl-wp-lndng-side">
-            <div class="rl-wp-lndng-fridge-title mobile">{{fridgeTitle}}</div>
             <div class="rl-wp-lndng-fridge"><img class="{{fridge}}" src="{{fridge}}" alt="{{fridgeAlt}}" /></div>
+                        <div class="rl-wp-lndng-fridge-title mobile">{{fridgeTitle}}</div>
             <div class="rl-wp-lndng-fridge-title">{{fridgeTitle}}</div>
             <div class="rl-wp-lndng-fridge-desc">{{fridgeDescription}}</div>
             <learn-more-button [analytics]="analytics" [link]="fridgeUrl" [text]="ctaText" [backgroundImage]="ctaBackground"></learn-more-button>

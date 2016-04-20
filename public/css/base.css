@@ -827,6 +827,9 @@ rl-mt-refer-landing {
     rl-mt-refer-landing product-selector product-slides {
       display: block;
       width: 100%; }
+      @media screen and (max-width: 479px) {
+        rl-mt-refer-landing product-selector product-slides {
+          margin-top: 40px; } }
     rl-mt-refer-landing product-selector .wp-refer-landing-product-slide {
       position: absolute;
       width: 943px; }
@@ -1044,7 +1047,7 @@ rl-mt-refer-landing {
         rl-mt-refer-landing product-selector-nav .see-all {
           display: initial;
           padding: initial;
-          width: 17.9%;
+          width: 16%;
           height: 186px; }
           rl-mt-refer-landing product-selector-nav .see-all div {
             margin-top: initial;

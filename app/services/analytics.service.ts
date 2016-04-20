@@ -25,12 +25,12 @@ export class AnalyticsService {
 		props = this.fillBindings(props)
 
 		if (this.propsAreEmpty(props)) {
-			this.logger.error(`AnalyticsService: ignored a ${props.eventType} event because all of it's properties are empty!`)
+			this.logger.error(this, `ignored a ${props.eventType} event because all of it's properties are empty!`)
 			return
 		}
 
 		if (this.debug) {
-			this.logger.log(`AnalyticsService: got a ${props.eventType} event, c:${props.category}, a:${props.action}, l:${props.label}`)
+			this.logger.log(this, `got a ${props.eventType} event, c:${props.category}, a:${props.action}, l:${props.label}`)
 		} else {
 			if (this.enabled) {
 				ga('send', 'event',
@@ -38,7 +38,7 @@ export class AnalyticsService {
 					props.action ? props.action : '',
 					props.label ? props.label : '')
 			} else {
-				this.logger.error(`AnalyticsService: ignored a ${props.eventType} event with the name ${props.action} because ga hasn't loaded yet!`)
+				this.logger.error(this, `ignored a ${props.eventType} event with the name ${props.action} because ga hasn't loaded yet!`)
 			}
 		}
 	}
@@ -49,7 +49,7 @@ export class AnalyticsService {
 	}
 
 	public debugMode(val: boolean) {
-		if (val) this.logger.log(`AnalyticsService: now in debug mode`)
+		if (val) this.logger.log(this, `Now in debug mode`)
 		this.debug = val;
 	}
 
@@ -81,12 +81,12 @@ export class AnalyticsService {
 				//matched keyword
 				var replace = this.bindings[i]['function'].call(this, str)
 				str = str.replace(`@${this.bindings[i].keyword}`, replace)
-				if (!replace) this.logger.log(`AnalyticsService: ${this.bindings[i].keyword} bind callback returned an empty string`)
+				if (!replace) this.logger.log(this, `${this.bindings[i].keyword} bind callback returned an empty string`)
 			}
 		}
 
 		if (str.indexOf('@') > -1) {
-			this.logger.error(`AnalyticsService: unrecognized binding in ${str}, ignoring`)
+			this.logger.error(this, `unrecognized binding in ${str}, ignoring`)
 			return false
 		}
 

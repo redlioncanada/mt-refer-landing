@@ -50,6 +50,10 @@ class AppComponent {
         breakpoint.add('desktop', 820)
         breakpoint.debugMode(true)
     }
+
+    ngAfterViewInit() {
+        this.breakpoint.initialize()
+    }
  }
 
 bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppDataService, AnalyticsService, BreakpointService, WindowProvider])

@@ -11,6 +11,7 @@ export class BreakpointService {
 	public breakpoint
 	private widths
 	private debug
+	private init
 
 	event: Observable<number>
 	private _observer: Observer<Object>
@@ -20,6 +21,7 @@ export class BreakpointService {
 		this.breakpoints = {}
 		this.widths = {}
 		this.debug = false
+		this.init = false
 
 		this.event = new Observable(observer => this._observer = observer).share()
 		this.window.onresize = function(e) {
@@ -27,9 +29,13 @@ export class BreakpointService {
 		}
 	}
 
+	public initialize() {
+		this.update(undefined)
+	}
+
 	public debugMode(b:boolean) {
 		this.debug = b
-		if (b) this.logger.log('BreakpointService: now in debug mode')
+		if (b) this.logger.log(this, 'Now in debug mode')
 	}
 
 	public is(keyword: string) {
@@ -55,8 +61,10 @@ export class BreakpointService {
 		}
 	}
 
-	private emit(breakpoint) {
-		this._observer.next(breakpoint)
+	private emit() {
+		this._observer.next(
+			this.breakpoint
+		)
 	}
 
 	private update(evt) {
@@ -79,25 +87,28 @@ export class BreakpointService {
 			breakpoint.name = curName
 
 			if (this.breakpoint && breakpoint.name == this.breakpoint.name) continue
+
 			if (!lastKey) {
 				if (window.width <= curWidth) {
-					this.breakpoint = breakpoint
-					this.emit(breakpoint)
-					if (this.debug) this.logger.log(breakpoint)
+					doEmit.call(this, breakpoint)
 				}
 			} else if (!nextKey) {
 				if (window.width >= curWidth) {
-					this.breakpoint = breakpoint
-					this.emit(breakpoint)
-					if (this.debug) this.logger.log(breakpoint)
+					doEmit.call(this, breakpoint)
 				}
 			} else {
 				if (window.width > lastWidth && window.width < nextWidth) {
-					this.breakpoint = breakpoint
-					this.emit(breakpoint)
-					if (this.debug) this.logger.log(breakpoint)
+					doEmit.call(this, breakpoint)
 				}
 			}
+		}
+
+		this.init = true
+
+		function doEmit(b) {
+			this.breakpoint = b
+			if (this.init) this.emit(b)
+			if (this.debug) this.logger.log(this, b)
 		}
 	}
 
