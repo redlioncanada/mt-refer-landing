@@ -42,7 +42,7 @@ export class MoreFeatures {
 		var element = this.elementRef.nativeElement
 		var height = $(element).find('more-features-feature .hover img').first().height()
 		$(element).find('more-features-feature .hover img').eq(1).css('height', height)
-		if (this._lastHeight == height) clearInterval(this._resizeInterval)
+		if (this._lastHeight == height && height != 0) clearInterval(this._resizeInterval)
 		this._lastHeight = height
     }
 }

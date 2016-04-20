@@ -52,6 +52,8 @@ class AppComponent {
     }
 
     ngAfterViewInit() {
+        //have to initialize after page load since it depends on global window being defined,
+        //and it's screen size being accurate
         this.breakpoint.initialize()
     }
  }

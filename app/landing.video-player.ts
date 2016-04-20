@@ -48,7 +48,7 @@ export class VideoPlayer {
 		var element = this.elementRef.nativeElement
 		var height = $(element).find('.wp-refer-landing-videoplayer-background').first().height()
 		$(element).find('.wp-refer-landing-videoplayer-background').eq(1).css('height', height)
-		if (this._lastHeight == height) clearInterval(this._resizeInterval)
+		if (this._lastHeight == height && height != 0) clearInterval(this._resizeInterval)
 		this._lastHeight = height
 	}
 }
