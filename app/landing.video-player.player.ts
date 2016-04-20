@@ -1,5 +1,5 @@
 import {Component, Input} from 'angular2/core'
-import {Logger} from './services/logger.service'
+import {LoggerService} from './services/logger.service'
 import {VideoPlayerVideo} from './landing.video-player.video'
 
 @Component({
@@ -25,6 +25,6 @@ export class VideoPlayerPlayer {
 	@Input() data
 	@Input() currentId
 
-	constructor(private logger: Logger) {
+	constructor(private logger: LoggerService) {
 	}
 }

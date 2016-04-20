@@ -17,6 +17,10 @@ product-selector {
         @media screen and (max-width: $mobileBreakpoint) {
             margin-bottom: 0px;
         }
+
+        @media screen and (max-width: 479px) {
+            height: 20px;
+        }
     }
     
    #french-door, #side-by-side, #bottom-freezer, #under-counter, #built-in{
@@ -176,11 +180,19 @@ product-selector-nav {
     .row {
         position: relative;
     }
+
+    @media screen and (max-width: 479px) {
+        height: 220px;
+    }
     
+    .wp-refer-landing-product {
+        margin-left: -3px;
+    }
+
     .wp-refer-landing-product,.see-all {
         float: left;
         width: 17.18%;
-        padding: 0 6px;
+        padding-right: 12px;
         
 
         img {
@@ -189,10 +201,6 @@ product-selector-nav {
     }
 
     .wp-refer-landing-product{
-        @media screen and (max-width: $mobileBreakpoint) {
-            width: 16.5%;
-        }
-
         > img {
             @include transition(0.2s);
         }
@@ -229,7 +237,7 @@ product-selector-nav {
 
         @media screen and (max-width: $mobileBreakpoint) {
             p {
-                font-size: 0.9em;
+                font-size: 0.6em;
                 font-weight: 200;
             }
         }
@@ -261,8 +269,7 @@ product-selector-nav {
 
     .see-all {
         height: 226px;
-        width: 13%;
-        margin-left: 1%;
+        width: 15%;
         color: $selectorSeeAllColor;
         text-transform: uppercase;
         display: table;
@@ -293,23 +300,24 @@ product-selector-nav {
         }
 
         @media screen and (max-width: $mobileBreakpoint) {
-            clear: left;
-            width: 97%;
-            margin-top: 10px;
             display: initial;
             padding: initial;
+            width: 17.9%;
+            height: 186px;
 
             div {
                 margin-top: initial;
                 margin: 0 auto;
-                width: 60px;
-                height: 60px;
             }
 
             p {
                 font-size: 1em;
                 line-height: 15px;
             }
+        }
+
+        @media screen and (max-width: 479px) {
+            height: 119px;
         }
     }
 }

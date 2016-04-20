@@ -1,15 +1,15 @@
 import {Injectable} from 'angular2/core';
-import {Logger} from './logger.service';
+import {LoggerService} from './logger.service';
+
+declare var ga;
 
 @Injectable()
-export class Analytics {
+export class AnalyticsService {
 	public enabled: boolean
-	private logger: Logger
 	private debug: boolean
 	private bindings
 
-	constructor(logger: Logger) {
-		this.logger = logger
+	constructor(private logger: LoggerService, private window: Window) {
 		this.enabled = this.gaObjectExists()
 		this.debug = false
 		this.bindings = []
@@ -25,20 +25,20 @@ export class Analytics {
 		props = this.fillBindings(props)
 
 		if (this.propsAreEmpty(props)) {
-			this.logger.error(`Analytics: ignored a ${props.eventType} event because all of it's properties are empty!`)
+			this.logger.error(`AnalyticsService: ignored a ${props.eventType} event because all of it's properties are empty!`)
 			return
 		}
 
 		if (this.debug) {
-			this.logger.log(`Analytics: got a ${props.eventType} event, c:${props.category}, a:${props.action}, l:${props.label}`)
+			this.logger.log(`AnalyticsService: got a ${props.eventType} event, c:${props.category}, a:${props.action}, l:${props.label}`)
 		} else {
 			if (this.enabled) {
-				window.ga('send', 'event',
+				ga('send', 'event',
 					props.category ? props.category : '',
 					props.action ? props.action : '',
 					props.label ? props.label : '')
 			} else {
-				this.logger.error(`Analytics: ignored a ${props.eventType} event with the name ${props.action} because ga hasn't loaded yet!`)
+				this.logger.error(`AnalyticsService: ignored a ${props.eventType} event with the name ${props.action} because ga hasn't loaded yet!`)
 			}
 		}
 	}
@@ -49,7 +49,7 @@ export class Analytics {
 	}
 
 	public debugMode(val: boolean) {
-		if (val) this.logger.log(`Analytics: now in debug mode`)
+		if (val) this.logger.log(`AnalyticsService: now in debug mode`)
 		this.debug = val;
 	}
 
@@ -63,7 +63,7 @@ export class Analytics {
 	}
 
 	private gaObjectExists() {
-		return 'ga' in window && typeof window.ga !== 'undefined' && window.ga
+		return 'ga' in this.window && typeof this.window['ga'] !== 'undefined' && this.window['ga']
 	}
 
 	private fillBindings(arr) {
@@ -81,12 +81,12 @@ export class Analytics {
 				//matched keyword
 				var replace = this.bindings[i]['function'].call(this, str)
 				str = str.replace(`@${this.bindings[i].keyword}`, replace)
-				if (!replace) this.logger.log(`Analytics: ${this.bindings[i].keyword} bind callback returned an empty string`)
+				if (!replace) this.logger.log(`AnalyticsService: ${this.bindings[i].keyword} bind callback returned an empty string`)
 			}
 		}
 
 		if (str.indexOf('@') > -1) {
-			this.logger.error(`Analytics: unrecognized binding in ${str}, ignoring`)
+			this.logger.error(`AnalyticsService: unrecognized binding in ${str}, ignoring`)
 			return false
 		}
 

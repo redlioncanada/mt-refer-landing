@@ -64,7 +64,8 @@ gulp.task('cuat', ['packNodeModules'], function() {
 		.pipe(replace(/<body.*>/g,'')).pipe(replace('</body>',''))
 		.pipe(replace(/<head.*>/g,'')).pipe(replace('</head>',''))
 		.pipe(replace(/<title>.*<\/title>/g, ''))
-		.pipe(gulp.dest('./cuat')))
+		.pipe(gulp.dest('./cuat'))
+	)
 
 	tasks.push(gulp.src(paths)
 		.pipe(gulp.dest('./cuat/javascript/'+base+'/')));

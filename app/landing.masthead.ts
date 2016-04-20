@@ -1,5 +1,5 @@
 import {Component, ElementRef} from 'angular2/core';
-import {AppData} from './services/appdata.service'
+import {AppDataService} from './services/appdata.service'
 
 declare var $: JQueryStatic;
 
@@ -24,7 +24,7 @@ export class AppMasthead {
 	private alt: string
 	private element: any
 
-	constructor(private appdata: AppData, private _elementRef: ElementRef) {
+	constructor(private appdata: AppDataService, private _elementRef: ElementRef) {
 		this.enabled = true
 		this.element = _elementRef.nativeElement
 		var data = appdata.get()

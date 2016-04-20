@@ -16,6 +16,11 @@ features {
             left: .3%;
         }
     }
+    @media (max-width: 479px) {
+        .row {
+            height: 165px;
+        }
+    }
 
     feature-button {
         width: 33.3333333333333%;
@@ -68,6 +73,7 @@ features {
 
         @media screen and (max-width: 479px) {
             font-size: 12px;
+            top: 110px;
         }
     }
 
@@ -119,7 +125,6 @@ features {
         }
 
         @media screen and (max-width: $mobileBreakpoint) {
-            font-size: 0.5em;
             top: 135px;
         }
     }
@@ -135,7 +140,6 @@ features {
 
         @media screen and (max-width: $mobileBreakpoint) {
             font-size: 0.8em;
-            margin-left: -10px;
         }
     }
 
@@ -179,6 +183,14 @@ features {
             margin-left: auto;
             margin-right: auto;
             margin-top: 10px;
+
+            @media (max-width: 479px) {
+                top: 88px;
+            }
+        }
+
+        @media(max-width: 479px) {
+            height: 165px;
         }
     }
 
@@ -228,6 +240,10 @@ features.fr {
 
 
     .mt-landing-feature-title {
+        @media (max-width: 479px) {
+            top: 110px;
+        }
+
         @media screen and (max-width: 1275px) {
             top: 95px;
             font-size: 0.8em;

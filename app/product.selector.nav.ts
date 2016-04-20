@@ -1,7 +1,7 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core'
-import {AppData} from './services/appdata.service'
+import {AppDataService} from './services/appdata.service'
 import {InsertBreakPipe} from './insertBreak.pipe'
-import {AnalyticsOn} from './analytics.directive'
+import {AnalyticsServiceOn} from './analytics.directive'
 
 @Component({
     selector: 'product-selector-nav',
@@ -19,7 +19,7 @@ import {AnalyticsOn} from './analytics.directive'
 			</div></a>
 		</div>
     `,
-    directives: [AnalyticsOn]
+    directives: [AnalyticsServiceOn]
 })
 
 export class ProductSelectorNav {
@@ -31,7 +31,7 @@ export class ProductSelectorNav {
 	private enabled: boolean
 	private analytics: Object
 
-	constructor(private appdata:AppData) {
+	constructor(private appdata:AppDataService) {
 		this.enabled = true
 		var data = appdata.get()
 

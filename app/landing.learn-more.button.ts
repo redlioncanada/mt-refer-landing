@@ -1,5 +1,5 @@
 import {Component, Input, Inject} from 'angular2/core'
-import {AnalyticsOn} from './analytics.directive'
+import {AnalyticsServiceOn} from './analytics.directive'
 
 @Component({
     selector: 'learn-more-button',
@@ -17,7 +17,7 @@ import {AnalyticsOn} from './analytics.directive'
 			<img *ngIf="!!backgroundImage" src="{{backgroundImage}}"/>
 		</div>
     `,
-    directives: [AnalyticsOn]
+    directives: [AnalyticsServiceOn]
 })
 export class LearnMoreButton {
 	@Input() link

@@ -1,7 +1,8 @@
 import {Component, Input, Output, Inject, ElementRef, EventEmitter} from 'angular2/core'
 import {ProductSlide} from './product.selector.slide'
 import {ProductModel} from './models/products.model'
-import {TimelineController} from './landing.timeline-controller'
+import {LoggerService} from './services/logger.service'
+import {BreakpointService} from './services/breakpoint.service'
 
 declare var $: JQueryStatic;
 
@@ -10,25 +11,26 @@ declare var $: JQueryStatic;
     template: `
       <div class="row">
           <product-slide class="{{selectedProduct.prodId == product.prodId ? 'selected' : ''}}" *ngFor="#product of products; #i=index" [selected]="selectedProduct.prodId == product.prodId" [fridge]= "product.prodImage" [fridgeTitle]= "product.prodName" [fridgeDescription]="product.prodDescription" [fridgeUrl]="product.prodUrl" [fridgeId]="product.prodId" [ctaText]="product.ctaText" [fridgeAlt]="product.prodAlt" [ctaBackground]="product.ctaBackground" [analytics]="product.analytics">
-
           </product-slide>
       </div>
     `,
     directives: [ProductSlide]
 })
-export class ProductSlides extends TimelineController {
-    @Input() products;
-    @Input() selectedProduct;
-    @Output() isAnimating = new EventEmitter();
+export class ProductSlides {
+    @Input() products
+    @Input() selectedProduct
+    @Output() isAnimating = new EventEmitter()
 
-    private rootElement;
-    private elementRef: ElementRef;
-    private _animating: boolean;
+    private breakpointChanged
 
-    private imageTop;
-    private titleTop;
-    private descTop;
-    private learnTop;
+    private rootElement
+    private elementRef: ElementRef
+    private _animating: boolean
+
+    private imageTop
+    private titleTop
+    private descTop
+    private learnTop
 
     set animating(a:boolean) {
         if (this._animating != a) {
@@ -37,14 +39,21 @@ export class ProductSlides extends TimelineController {
         }
     }
 
-    public constructor(@Inject(ElementRef) elementRef: ElementRef) {
-        super()
+    public constructor(@Inject(ElementRef) elementRef: ElementRef, private logger: LoggerService, private breakpoint: BreakpointService) {
         this.elementRef = elementRef
         this.animating = false
         this.imageTop = 155;
         this.titleTop = 170;
         this.descTop = 215;
-        this.learnTop = 500;
+        this.learnTop = 520;
+        this.breakpointChanged = this.breakpoint.event.subscribe(
+          breakpoint => this.onBreakpointChange(breakpoint)
+        )
+    }
+
+    private onBreakpointChange(breakpoint) {
+      var target = this.selectedProduct.prodId
+      this.playIn(this, true, target)
     }
 
      private ngAfterViewInit() {
@@ -102,7 +111,7 @@ export class ProductSlides extends TimelineController {
         var desc = ($(target).find('.rl-wp-lndng-fridge-desc'))
         var learn = ($(target).find('learn-more-button'))
 
-        var isMobile = $(window).innerWidth() <= 820
+        var isMobile = this.breakpoint.is('tablet') || this.breakpoint.is('mobile')
 
         if (isMobile) {
           TweenMax.to(image, 0, { delay: 0, top: 0 });

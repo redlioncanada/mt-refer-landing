@@ -1,6 +1,5 @@
 import {Component, Input, Inject, ElementRef} from 'angular2/core'
-import {TimelineController} from './landing.timeline-controller'
-import {AnalyticsOn} from './analytics.directive'
+import {AnalyticsServiceOn} from './analytics.directive'
 
 declare var $: JQueryStatic;
 
@@ -28,10 +27,10 @@ declare var $: JQueryStatic;
             </div>
         </a>
     `,
-    directives: [AnalyticsOn]
+    directives: [AnalyticsServiceOn]
 })
 
-export class FeatureButton extends TimelineController {
+export class FeatureButton {
     @Input() btnIcon
     @Input() btnTitle
     @Input() btnRollOverCopy
@@ -48,7 +47,6 @@ export class FeatureButton extends TimelineController {
     private targetHeight;
 
     public constructor(@Inject(ElementRef) elementRef: ElementRef) {
-        super()
         this.elementRef = elementRef
         this.rootElement = $(this.elementRef.nativeElement)
     }

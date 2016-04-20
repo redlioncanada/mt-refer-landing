@@ -1,9 +1,9 @@
 import {Component, Input, Output, EventEmitter, ElementRef} from 'angular2/core'
-import {Logger} from './services/logger.service'
-import {GoogleApi} from './services/googleapi.service'
+import {LoggerService} from './services/logger.service'
+import {GoogleApiService} from './services/googleapi.service'
 import {VideoPlayer} from './landing.video-player'
 import {LearnMoreButton} from './landing.learn-more.button'
-import {AnalyticsOn} from './analytics.directive'
+import {AnalyticsServiceOn} from './analytics.directive'
 
 declare var $: JQueryStatic;
 
@@ -18,7 +18,7 @@ declare var $: JQueryStatic;
 			<img class="wp-refer-landing-videoplayer-background" src="{{data.thumb}}" alt="{{data.alt}}"/>
 		</div>
     `,
-    directives: [LearnMoreButton, AnalyticsOn]
+    directives: [LearnMoreButton, AnalyticsServiceOn]
 })
 export class VideoPlayerSelector {
 	@Input() data
@@ -29,7 +29,7 @@ export class VideoPlayerSelector {
 	ready: boolean
 	_renderInterval: any
 
-	constructor(private logger: Logger, private api: GoogleApi, private elementRef: ElementRef) {
+	constructor(private logger: LoggerService, private api: GoogleApiService, private elementRef: ElementRef) {
 		this.ready = false
 		this.selected = false
 		this.init = false
@@ -56,7 +56,7 @@ export class VideoPlayerSelector {
 	initialize(data) {
 		//assumes 1 result
 		data = data.items[0];
-		this.data.desc = data.snippet.description.replace(/\\n/g, '');
+		this.data.desc = data.snippet.description.replace(/\\n/g, '')
 		this.ready = true
 	}
 

@@ -1,14 +1,14 @@
 
 import {Injectable} from 'angular2/core';
-import {Logger} from './logger.service'
+import {LoggerService} from './logger.service'
 
 @Injectable()
-export class AppData {
+export class AppDataService {
 	private contents;
 	public language: string;
 	private init: boolean
 
-	constructor(private logger: Logger) {
+	constructor(private logger: LoggerService) {
 		this.language = this.getLanguage()
 		this.contents = {}
 		this.contents.en = {
@@ -56,7 +56,7 @@ export class AppData {
 						desc: "See what others are saying",
 						ctaText: "Click Here",
 						ctaBackground: "./public/images/button-background.png",
-						link: "https://www.google.ca/#q=placeholder",
+						link: "http://www.maytag.ca/en_CA/2_3_90/jump-page_best-products.content.html",
 						type: "star",
 						analytics: {
 							category: "@category",
@@ -88,7 +88,7 @@ export class AppData {
 					{
 						title: "Additional Accessories",
 						image: "./public/images/more-features-1.jpg",
-						link: "https://www.google.ca/#q=placeholder",
+						link: "http://www.maytag.ca/en_CA/Accessories-1/Accessories_Kitchen_Refrigerator-3/102290104/",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -96,7 +96,7 @@ export class AppData {
 					{
 						title: "Water Filtration",
 						image: "./public/images/more-features-2.jpg",
-						link: "https://www.google.ca/#q=placeholder",
+						link: "http://www.maytag.ca/en_CA/2_3_80/jump-page_water-filters.content.html",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -104,7 +104,7 @@ export class AppData {
 					{
 						title: "Certified Care",
 						image: "./public/images/more-features-3.jpg",
-						link: "https://www.google.ca/#q=placeholder",
+						link: "http://www.maytag.ca/en_CA/2_3_1/jump-page_extended-service-plans.content.html",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -179,8 +179,8 @@ export class AppData {
 						image: "./public/images/products/four-door.png",
                         title: "Four-door",
                         alt: "test",
-                        desc: "There’s getting organized, and then there’s getting organized your way. Thanks to the adjustable- temperature refrigerated drawer and EasySlide bin, you can store everything you need exactly the way you want to. Plus, the 4- door fridge’s premium design will keep it looking great on the outside, too.",
-                        link: "https://www.google.ca/#q=placeholder",
+                        desc: "There’s getting organized, and then there’s getting organized your way. Thanks to the adjustable-temperature refrigerated drawer and EasySlide bin, you can store everything you need exactly the way you want to. Plus, the 4-door fridge’s premium design will keep it looking great on the outside, too.",
+                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031+4294966906+112290217/​",
                         id: "four-door",
                         ctaText: "Learn More",
                         ctaBackground: "./public/images/button-background.png",
@@ -195,8 +195,8 @@ export class AppData {
 						image: "./public/images/products/french-door.png",
                         title: "French Door",
                         alt: "test",
-                        desc: "Optimal capacity. Flexible organization. They’re not just words: they’re what make a French Door fridge more convenient to use than ever. That means keeping your fresh foods at eye level and easily storing your frozen favourites. Plus, its premium design looks great in any kitchen.",
-                        link: "https://www.google.ca/#q=placeholder",
+                        desc: "More capacity. More ways to stay organized. French Door fridges are made with convenience in mind. That means keeping your fresh foods at eye level and easily storing your frozen favourites. Plus, it’s built to look great in any kitchen.",
+                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031+4294966906/",
                         id: "french-door",
                         ctaText: "Learn More",
                         ctaBackground: "./public/images/button-background.png",
@@ -211,8 +211,8 @@ export class AppData {
 						image: "./public/images/products/side-by-side.png",
                         title: "Side-by-Side",
                         alt: "test",
-                        desc: "Classic style made to fit your space, big or small. More door bin space means you can easily store and access food items. Plus, it’s designed to maximize your ability to store both fresh and frozen foods. A range of different sizing options are available.",
-                        link: "https://www.google.ca/#q=placeholder",
+                        desc: "Classic style? Check. Fits your space? You bet. More door bin space means you can easily store and access food items. Plus it’s built to store more of whatever you need, whether that’s fresh or frozen foods. And yes, a range of different sizes are available.",
+                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_SidebySide-3/102290031+4294967038/",
                         id: "side-by-side",
                         ctaText: "Learn More",
                         ctaBackground: "./public/images/button-background.png",
@@ -227,8 +227,8 @@ export class AppData {
 						image: "./public/images/products/bottom-freezer.png",
                         title: "Bottom-Freezer",
                         alt: "test",
-                        desc: "Accessing fresh food items doesn’t get easier than this. Bottom-freezer refrigerators keep everything you need at eye-level, so you don’t have to go searching when you’re in a hurry. Now that’s convenience.",
-                        link: "https://www.google.ca/#q=placeholder",
+                        desc: "Getting to your fresh food items doesn’t get easier than this. You can count on bottom-freezer refrigerators to keep everything you need at eye-level, so you won’t have to go searching when you’re in a hurry. How’s that for convenience?",
+                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Bottom_Freezer-3/102290031+4294967048/",
                         id: "bottom-freezer",
                         ctaText: "Learn More",
                         ctaBackground: "./public/images/button-background.png",
@@ -244,7 +244,7 @@ export class AppData {
                         title: "Top-Freezer",
                         alt: "test",
                         desc: "Quality, meet value. With a top-freezer refrigerator, there’s always a place to store fresh and frozen foods. Plus, they’re available in smaller sizes, so you can use a second one when you need the extra space. You’re right, that is a good idea.",
-                        link: "https://www.google.ca/#q=placeholder",
+                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Top_Freezer-3/102290031+4294967059/",
                         id: "top-freezer",
                         ctaText: "Learn More",
                         ctaBackground: "./public/images/button-background.png",
