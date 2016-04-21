@@ -21,14 +21,14 @@ export class AppDataService {
 			},
 			banner: {
 				enabled: true,
-				link: 'http://www.whirlpool.ca/en_CA/everydaycare/',
+				link: '/en_CA/2_3_1121/jump-page_may-is-maytag-promo.content.html',
 				image: './public/images/banner.jpg',
 				ctaText: 'Learn More',
 				ctaBackground: './public/images/button-background.png',
 				analytics: {
 					category: "@category",
 					action: "Clicked Bottom Banner",
-					label: "Every Day Care-Learn More"
+					label: "Promotion-Learn More"
 				}
 			},
 			features: {
@@ -116,21 +116,6 @@ export class AppDataService {
 				title: "Built Better",
 				videos: [
 					{
-						id: 'u8rBThh8bPo',
-						thumb: './public/images/video-select-1.jpg',
-						title: 'Temperature Drawer',
-						alt: "test",
-						ctaTitle: 'Temperature Drawer',
-						ctaText: 'Watch Video',
-						ctaBackground: "./public/images/button-background.png",
-						desc: "Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
-						analytics: {
-							category: "@category",
-							action: "Clicked Built Better",
-							label: "Temperature Drawer"
-						}
-					},
-					{
 						id: 'Fm_-PxETMUA',
 						thumb: './public/images/video-select-2.jpg',
 						title: 'Four-door',
@@ -143,6 +128,21 @@ export class AppDataService {
 							category: "@category",
 							action: "Clicked Built Better",
 							label: "Four-door"
+						}
+					},
+					{
+						id: 'u8rBThh8bPo',
+						thumb: './public/images/video-select-1.jpg',
+						title: 'Temperature Drawer',
+						alt: "test",
+						ctaTitle: 'Temperature Drawer',
+						ctaText: 'Watch Video',
+						ctaBackground: "./public/images/button-background.png",
+						desc: "Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "Temperature Drawer"
 						}
 					},
 					{
@@ -180,7 +180,7 @@ export class AppDataService {
                         title: "Four-door",
                         alt: "test",
                         desc: "There’s getting organized, and then there’s getting organized your way. Thanks to the adjustable-temperature refrigerated drawer and EasySlide bin, you can store everything you need exactly the way you want to. Plus, the 4-door fridge’s premium design will keep it looking great on the outside, too.",
-                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031+4294966906+112290217/​",
+                        link: "http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Top_Freezer-3/102290031+112290217/",
                         id: "four-door",
                         ctaText: "Learn More",
                         ctaBackground: "./public/images/button-background.png",
@@ -262,57 +262,81 @@ export class AppDataService {
 		this.contents.fr = {
 			masthead: {
 				enabled: true,
-				image: "./public/images/refer-landing-masthead-fr.jpg",
-				imageForeground: "./public/images/refer-landing-masthead-fr.jpg",
+				image: "./public/images/refer-landing-masthead-1-fr.jpg",
+				imageForeground: "./public/images/refer-landing-masthead-2-fr.jpg",
 				alt: "test",
-				title: ""
+				title: "Réfrigérateurs"
 			},
 			banner: {
 				enabled: true,
-				link: 'http://www.whirlpool.ca/fr_CA/everydaycare/',
-				image: './public/images/banner_fr.jpg',
-				ctaText: 'En savoir plus'
+				link: '/en_CA/2_3_1121/jump-page_may-is-maytag-promo.content.html',
+				image: './public/images/banner.jpg',
+				ctaText: 'En savoir plus',
+				ctaBackground: './public/images/button-background.png',
+				analytics: {
+					category: "@category",
+					action: "Clicked Bottom Banner",
+					label: "Promotion-Learn More"
+				}
 			},
 			features: {
 				enabled: true,
 				features: [
-					// {
-					// 	image: "./public/images/refer-landing-shopping-cart.png",
-					// 	title: "Guide D'achat",
-					// 	desc: "Éléments à considérer lorsque vous magasinez",
-					// 	alt: "test",
-					// 	cta: "Cliquez ici",
-					// 	link: "http://whirlpool.ca/fr_CA/",
-					// 	type: "cart"
-					// },
+					{
+						image: "./public/images/refer-landing-shopping-cart.png",
+						title: "Guide D'achat",
+						alt: "test",
+						desc: "Éléments à considérer lorsque vous magasinez",
+						ctaText: "Cliquez ici",
+						ctaBackground: "./public/images/button-background.png",
+						link: "https://www.google.ca/#q=placeholder",
+						type: "cart",
+						analytics: {
+							category: "@category",
+							action: "Clicked Refer Resources",
+							label: "Buying Guide"
+						}
+					},
 					{
 						image: "./public/images/refer-landing-star.png",
 						title: "Classements et Évaluations",
-						desc: "Voyez ce que les autres clients en disent",
 						alt: "test",
-						cta: "Cliquez ici",
-						link: "http://www.whirlpool.ca/fr_CA/2_3_90/jump-pages_best-products.content.html",
-						type: "star"
+						desc: "Voyez ce que les autres clients en disent",
+						ctaText: "Cliquez ici",
+						ctaBackground: "./public/images/button-background.png",
+						link: "http://www.maytag.ca/fr_CA/2_3_90/jump-page_best-products.content.html",
+						type: "star",
+						analytics: {
+							category: "@category",
+							action: "Clicked Refer Resources",
+							label: "Ratings and Reviews"
+						}
 					},
 					{
 						image: "./public/images/refer-landing-mag-glass.png",
-						title: "Trouvez Votre Électroménager Whirlpool",
-						desc: "Vous avez besoin d'aide pour trouver un réfrigérateur?",
+						title: "Trouvez Votre Électroménager Maytag",
 						alt: "test",
-						cta: "Cliquez ici",
-						link: "http://trouvermon.whirlpool.ca",
-						type: "magnifier"
+						desc: "Vous avez besoin d'aide pour trouver un réfrigérateur?",
+						ctaText: "Cliquez ici",
+						ctaBackground: "./public/images/button-background.png",
+						link: "http://trouvermon.maytag.ca",
+						type: "magnifier",
+						analytics: {
+							category: "@category",
+							action: "Clicked Refer Resources",
+							label: "Find Your MT"
+						}
 					}
 				]
 			},
 			morefeatures: {
 				enabled: true,
-				title: "Fonctions supplémentaires",
+				title: "Get More From Your Refrigerator(fr)",
 				features: [
 					{
-						title: "Accessoires supplémentaires",
+						title: "Accessoires",
 						image: "./public/images/more-features-1.jpg",
-						link: "http://www.whirlpool.ca/fr_CA/Accessories-1/Accessories_Kitchen_Accessories_Refrigerator-3/102280119/",
+						link: "http://www.maytag.ca/fr_CA/Accessories-1/Accessories_Kitchen_Refrigerator-3/102290104/",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -320,7 +344,7 @@ export class AppDataService {
 					{
 						title: "Filtres à eau",
 						image: "./public/images/more-features-2.jpg",
-						link: "http://www.whirlpool.ca/fr_CA/2_3_80/jump-pages_water-filters.content.html",
+						link: "http://www.maytag.ca/fr_CA/2_3_80/jump-page_water-filters.content.html",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -328,7 +352,7 @@ export class AppDataService {
 					{
 						title: "Entretien autorisé",
 						image: "./public/images/more-features-3.jpg",
-						link: "https://whirlpoolcertifiedcare.ca/fr",
+						link: "http://www.maytag.ca/fr_CA/2_3_1/jump-page_extended-service-plans.content.html",
 						alt: "test",
 						text: "",
 						cta: ""
@@ -337,98 +361,147 @@ export class AppDataService {
 			},
 			videoplayer: {
 				enabled: true,
-				title: "Innovation à voir absolument",
+				title: "Built Better(fr)",
 				videos: [
 					{
-						image: './public/images/video-thumb-1.jpg',
-						thumb: './public/images/video-select-1.jpg',
-						title: 'Système de rangement Perfect Places<sup>&trade;</sup>',
-						ctaTitle: 'Système de rangement Perfect Places<sup>&trade;</sup>',
-						alt: "test",
-						cta: 'Voir',
-						desc: 'La conception Whirlpool à double tiroir  offre cinq zones de rangement uniques pour mieux organiser vos articles. Il s\'agit de notre réfrigérateur le plus flexible à ce jour.'
-					},
-					{
-						image: './public/images/video-thumb-2.jpg',
+						id: 'Fm_-PxETMUA',
 						thumb: './public/images/video-select-2.jpg',
-						title: 'Fonctions Resource Saver<sup>&trade;</sup> et EasyView<sup>&trade;</sup>',
-						ctaTitle: 'Fonctions Resource Saver<sup>&trade;</sup><br/>et EasyView<sup>&trade;</sup>',
+						title: 'Four-door(fr)',
 						alt: "test",
-						cta: 'Voir',
-						desc: 'Les réfrigérateurs les plus efficaces de l’industrie dans leur catégorie respective. Augmentez la souplesse de rangement de votre réfrigérateur et préservez la fraîcheur et le bon goût de vos fruits et légumes grâce au système de bacs à légumes triples EasyView™. Désormais, vous pouvez facilement accéder aux aliments grâce à la visibilité totale à travers le bac à légumes. De plus, vous pourrez ranger une grande variété d\'articles grâce aux trois tiroirs. Le contrôle automatique d\'humidité contribue également à maintenir la fraîcheur.',
+						ctaTitle: 'Four-door(fr)',
+						ctaText: 'Voir la video',
+						ctaBackground: "./public/images/button-background.png",
+						desc: "(fr)Providing your family with fresh, healthy food is one of your strengths and Maytag's too. That's why Maytag's 4-door refrigerator sets a bold new standard for refrigeration. With advanced features and unmatched durability to keep your food chilled properly - from the first grape to the last - and when it comes to cooling, this powerful Maytag® Refrigerator is made to hold the cold. It's Dual Cool Evaporators have an evaporator dedicated to each compartment which generate ideal humidity levels in both the freezer and the refrigerator so all your food stays at it's best. And, with Maytag's 10 year limited parts warranty on the compressor, you can count on it to hold the cold for years. Maytag's patented door seal design helps lock in cold air but if things get heated, your coolness won't be compromised. Power Cold™ quickly chills down the refrigerator with the touch of a button to keep everything fresh and tasty. Just like you, the Maytag® Refrigerator keeps things running smoothly with smooth sliding premium glides and rollers. Maytag® Steel Shelves are cold to the touch and ruggedly reliable with under-shelf LED lighting that gives you light everywhere you need it. Maytag's Store-N-Door ice dispensing system and sturdy gallon door bins help to utilize every inch of your refrigerator.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "Four-door"
+						}
 					},
 					{
-						image: './public/images/video-thumb-3.jpg',
-						thumb: './public/images/video-select-3.jpg',
-						title: 'Système de rangement StoreRight<sup>&trade;</sup>',
-						ctaTitle: 'Système de rangement StoreRight<sup>&trade;</sup>',
+						id: 'u8rBThh8bPo',
+						thumb: './public/images/video-select-1.jpg',
+						title: 'Temperature Drawer(fr)',
 						alt: "test",
-						cta: 'Voir',
-						desc: 'Le système de rangement StoreRight™ préserve la fraîcheur des aliments et réduit les brûlures de congélation, grâce à une technologie de refroidissement perfectionnée et ajuste automatiquement les niveaux d\'humidité.'
+						ctaTitle: 'Temperature Drawer(fr)',
+						ctaText: 'Voir la video',
+						ctaBackground: "./public/images/button-background.png",
+						desc: "(fr)Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "Temperature Drawer"
+						}
+					},
+					{
+						id: 'OSgIUSI1ZkE',
+						thumb: './public/images/video-select-3.jpg',
+						title: 'Garantie limitée de 10 ans',
+						alt: "test",
+						ctaTitle: 'Garantie limitée de 10 ans',
+						ctaText: 'Voir la video',
+						ctaBackground: "./public/images/button-background.png",
+						desc: "(fr)At Maytag, we don't just tell you our refrigerators are made for the long haul, we're so confident in our product that we've added a 10 year limited parts warranty on select parts to back them up. Our warranty on the compressor covers the heart of the refrigerator, so you know you can count on it to hold the cold for years.",
+						analytics: {
+							category: "@category",
+							action: "Clicked Built Better",
+							label: "10-Year Warranty"
+						}
 					}
 				]
 			},
 			productselector: {
 				enabled: true,
-				title: 'Choisissez votre style',
+				title: 'Choose Your Configuration(fr)',
 				nav: {
-					text: 'Tout<br/>Voir',
-					link: 'http://www.whirlpool.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back'
+					text: 'Voir<br/>Tout',
+					link: 'http://www.whirlpool.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back',
+					analytics: {
+						category: "@category",
+						action: "Clicked Choose Your Refer Configuration",
+						label: "See all Refer"
+					}
 				},
 				products: [
 					{
-						image: "./public/images/products/double-drawer.png",
-                        title: "Tiroir double",
-                        desc: "Devenez le champion de l’organisation grâce à notre réfrigérateur polyvalent à double tiroir, conçu pour tous les besoins de votre famille. Son style unique offre 9 espaces de rangement, optimisés par notre système PerfectPlaces™, avec le tiroir à température contrôlée et le bac pour petits articles.",
-                        link: "http://www.whirlpool.ca/fr_CA/kitchen-1/refrigeration-2/refrigerators-3/-%5BWRV986FDEM%5D-5552596/WRV986FDEM/",
+						image: "./public/images/products/four-door.png",
+                        title: "Four-door(fr)",
                         alt: "test",
-                        id: "double-drawer",
-                        ctaText: "En savoir plus"
+                        desc: "Ce réfrigérateur vous permettra non seulement de ranger vos articles, mais de le faire à votre façon. Grâce au tiroir-réfrigérateur à température réglable et au bac coulissant EasySlide, vous pouvez maintenant ranger et conserver tout ce que vous voulez, exactement comme vous le voulez. Par ailleurs, la conception épurée de ce modèle à 4 portes lui confère une grande élégance extérieure.",
+                        link: "http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Top_Freezer-3/102290031+112290217/",
+                        id: "four-door",
+                        ctaText: "En savoir plus",
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Four-door",
+							learnMore: 'Learn More'
+						}
                     },
 					{
 						image: "./public/images/products/french-door.png",
-                        title: "Portes françaises",
-                        desc: "Nos réfrigérateurs à portes françaises procurent un rangement polyvalent, maintiennent vos produits frais à hauteur des yeux et vous permettent de conserver facilement vos produits congelés favoris. Leur élégance et capacité optimale font de ces réfrigérateurs un élément idéal de votre cuisine familiale.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back",
+                        title: "Portes Françaises",
                         alt: "test",
+                        desc: "Plus grande capacité. Plus d'options de rangement. Les réfrigérateurs à portes françaises sont conçus pour être pratiques. Cela signifie que vos aliments se trouvent au niveau des yeux et que vos articles congelés préférés sont faciles à ranger. Par ailleurs, ce modèle est conçu pour s'agencer harmonieusement à toute cuisine.",
+                        link: "http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031+4294966906/",
                         id: "french-door",
-                        ctaText: "En savoir plus"
+                        ctaText: "En savoir plus",
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "French Door",
+							learnMore: 'Learn More'
+						}
                     },
 					{
 						image: "./public/images/products/side-by-side.png",
-                        title: "Côte à côte",
-                        desc: "Découvrez l’avantage d’un espace supplémentaire dans les balconnets de porte qui facilitent le rangement et l'accès aux petits ou grands articles. Ce style classique offre un rangement parfaitement équilibré entre les aliments frais et surgelés, avec la possibilité de choisir différentes tailles.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back",
+                        title: "Côte à Côte",
                         alt: "test",
+                        desc: "Style classique? Oui. Convient à votre espace? Absolument. Davantage d'espace dans les portes signifie que vous pouvez ranger et accéder facilement à vos aliments. Par ailleurs, le réfrigérateur est conçu pour ranger une plus grande quantité de vos articles congelés ou frais. Bien sûr, nous offrons un choix de différentes tailles.",
+                        link: "http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_SidebySide-3/102290031+4294967038/",
                         id: "side-by-side",
-                        ctaText: "En savoir plus"
+                        ctaText: "En savoir plus",
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Side-by-side",
+							learnMore: 'Learn More'
+						}
                     },
 					{
 						image: "./public/images/products/bottom-freezer.png",
-                        title: "Congélateur inférieur",
-                        desc: "Bénéficiez d’un accès pratique aux aliments frais et aux collations sur le pouce ou après l'école. Vous avez le choix entre le congélateur-tiroir ou à porte, ainsi qu'une variété de tailles s'agençant à tout espace de votre maison.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023/",
+                        title: "Congélateur Inférieur",
                         alt: "test",
+                        desc: "Vous ne trouverez pas une façon plus facile d’accéder à vos aliments frais. Vous pouvez compter sur les réfrigérateurs à congélateur inférieur pour garder vos aliments à la hauteur des yeux, vous n'avez donc pas besoin de perdre du temps à chercher lorsque vous êtes pressé. N’est ce pas pratique?",
+                        link: "http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Bottom_Freezer-3/102290031+4294967048/",
                         id: "bottom-freezer",
-                        ctaText: "En savoir plus"
+                        ctaText: "En savoir plus",
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Bottom-Freezer",
+							learnMore: 'Learn More'
+						}
                     },
                     {
 						image: "./public/images/products/top-freezer.png",
-                        title: "Congélateur supérieur",
-                        desc: "Il y aura toujours une place pour vos aliments frais ou surgelés favoris dans ce réfrigérateur au style simple et classique à la fois. Notre réfrigérateur à congélateur supérieur offre un excellent rapport qualité/prix et est aussi disponible en tailles plus petites.",
-                        link: "http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023/",
+                        title: "Congélateur Supérieur",
                         alt: "test",
+                        desc: "Excellent rapport qualité-prix. Dans un réfrigérateur à congélateur supérieur, il y a toujours de la place pour ranger les articles frais et surgelés. Par ailleurs, ces modèles à congélateur supérieur sont aussi offerts en tailles plus compactes, vous pouvez alors en utiliser un deuxième lorsque vous avez besoin de plus d'espace de rangement. Vous avez raison, c'est une excellente idée.",
+                        link: "http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Top_Freezer-3/102290031+4294967059/",
                         id: "top-freezer",
-                        ctaText: "En savoir plus"
-                    },
-					{
-						image: "./public/images/products/freezer.png",
-                        title: "Congélateurs",
-                        desc: "Découvrez tout l'espace supplémentaire pour les aliments congelés, tels que les pizzas ou les suçons glacés. Nos modèles horizontaux ou verticaux assurent l'ajustement idéal pour tout espace.",
-                        link: "http://www.whirlpool.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Freezers-3/102280030/",
-                        alt: "test",
-                        id: "freezers",
-                        ctaText: "En savoir plus"
+                        ctaText: "En savoir plus",
+                        ctaBackground: "./public/images/button-background.png",
+                        analytics: {
+							category: "@category",
+							action: "Clicked Choose Your Refer Configuration",
+							label: "Top-Freezer",
+							learnMore: 'Learn More'
+						}
                     }
 				]
 			}

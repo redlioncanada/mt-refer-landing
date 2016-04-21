@@ -544,31 +544,6 @@ rl-mt-refer-landing {
         opacity: 1; }
       rl-mt-refer-landing videoplayer-selector .selected .wp-refer-landing-videoplayer-title {
         opacity: 0; }
-  rl-mt-refer-landing videoplayer.fr ul li videoplayer-selector .wp-refer-landing-videoplayer-title {
-    line-height: 35px; }
-    @media screen and (max-width: 820px) {
-      rl-mt-refer-landing videoplayer.fr ul li videoplayer-selector .wp-refer-landing-videoplayer-title {
-        font-size: 0.8em;
-        line-height: 15px; } }
-  rl-mt-refer-landing videoplayer.fr ul li:nth-child(1) videoplayer-selector .wp-refer-landing-videoplayer-title {
-    margin-top: -92px; }
-    @media screen and (max-width: 820px) {
-      rl-mt-refer-landing videoplayer.fr ul li:nth-child(1) videoplayer-selector .wp-refer-landing-videoplayer-title {
-        margin-top: -23px; } }
-  rl-mt-refer-landing videoplayer.fr ul li:nth-child(2) videoplayer-selector .wp-refer-landing-videoplayer-title {
-    margin-top: -92px; }
-    @media screen and (max-width: 820px) {
-      rl-mt-refer-landing videoplayer.fr ul li:nth-child(2) videoplayer-selector .wp-refer-landing-videoplayer-title {
-        margin-top: -23px; } }
-  rl-mt-refer-landing videoplayer.fr ul li:nth-child(3) videoplayer-selector .wp-refer-landing-videoplayer-title {
-    margin-top: -92px; }
-    @media screen and (max-width: 820px) {
-      rl-mt-refer-landing videoplayer.fr ul li:nth-child(3) videoplayer-selector .wp-refer-landing-videoplayer-title {
-        margin-top: -23px; } }
-  @media screen and (max-width: 820px) {
-    rl-mt-refer-landing videoplayer.fr videoplayer-selector .wp-refer-landing-videoplayer-title {
-      font-size: 1em;
-      margin-top: -8px; } }
   rl-mt-refer-landing masthead {
     width: 80%;
     position: relative;
@@ -786,22 +761,6 @@ rl-mt-refer-landing {
     rl-mt-refer-landing features feature-button:last-of-type .mt-landing-feature-button {
       margin-right: 0px;
       margin-left: 3px; }
-  @media screen and (max-width: 1275px) {
-    rl-mt-refer-landing features.fr .row {
-      height: 235px; } }
-  @media screen and (max-width: 820px) {
-    rl-mt-refer-landing features.fr .row {
-      height: 230px; } }
-  @media screen and (max-width: 1275px) {
-    rl-mt-refer-landing features.fr .mt-landing-feature-rule {
-      font-size: 0.7em; } }
-  @media (max-width: 479px) {
-    rl-mt-refer-landing features.fr .mt-landing-feature-title {
-      top: 110px; } }
-  @media screen and (max-width: 1275px) {
-    rl-mt-refer-landing features.fr .mt-landing-feature-title {
-      top: 95px;
-      font-size: 0.8em; } }
   rl-mt-refer-landing product-selector {
     width: 80%;
     position: relative; }
@@ -1058,25 +1017,16 @@ rl-mt-refer-landing {
       @media screen and (max-width: 479px) {
         rl-mt-refer-landing product-selector-nav .see-all {
           height: 119px; } }
-  rl-mt-refer-landing product-selector.fr .rl-wp-lndng-fridge-title {
-    width: 450px; }
-  @media screen and (max-width: 820px) {
-    rl-mt-refer-landing product-selector.fr .rl-wp-lndng-fridge-title.mobile {
-      width: 100%; } }
-  rl-mt-refer-landing product-selector.fr .rl-wp-lndng-fridge-desc {
-    width: 450px; }
-    @media screen and (max-width: 820px) {
-      rl-mt-refer-landing product-selector.fr .rl-wp-lndng-fridge-desc {
-        width: 100%; } }
-  @media screen and (max-width: 820px) {
-    rl-mt-refer-landing product-selector.fr product-selector-nav div .wp-refer-landing-button p {
-      font-size: 0.6em;
-      font-weight: 200; } }
-  rl-mt-refer-landing product-selector.fr product-slides product-slide .rl-wp-lndng-fridge-title.mobile {
-    font-size: 18px;
-    line-height: 20px; }
+  @media screen and (max-width: 479px) {
+    rl-mt-refer-landing product-selector.fr product-slides {
+      margin-top: 73px; } }
+  @media screen and (max-width: 479px) {
+    rl-mt-refer-landing product-selector.fr product-selector-nav .wp-refer-landing-button p {
+      font-size: 0.4em; } }
   rl-mt-refer-landing product-selector.fr learn-more-button {
-    width: 135px; }
+    width: 150px; }
+    rl-mt-refer-landing product-selector.fr learn-more-button .learn-more-button {
+      top: 1px; }
   rl-mt-refer-landing .product-slide-background {
     width: 100%;
     height: 130px;
@@ -1226,10 +1176,9 @@ rl-mt-refer-landing {
           height: 28px; }
           rl-mt-refer-landing banner learn-more-button img {
             top: 3px; } }
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 479px) {
     rl-mt-refer-landing banner.fr learn-more-button {
-      right: 37%;
-      width: 28%; } }
+      width: 31%; } }
   rl-mt-refer-landing footer {
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;

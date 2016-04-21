@@ -26,10 +26,9 @@ banner {
 }
 
 banner.fr {
-	learn-more-button {
-		@media screen and (max-width: $mobileBreakpoint) {
-			right: 37%;
-			width: 28%;
-		}
-	}
+    learn-more-button {
+        @media screen and (max-width: 479px) {
+            width: 31%;
+        }
+    }
 }

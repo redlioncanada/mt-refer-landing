@@ -68,12 +68,11 @@ export class ProductSlides {
               this.playOut(changes.selectedProduct.previousValue.prodId, function() {
 
                  //just get it done
-                if (changes.selectedProduct.currentValue.prodId == 'under-counter' && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
-                  self.descTop = 265;
+                if ((changes.selectedProduct.currentValue.prodId == 'four-door' || changes.selectedProduct.currentValue.prodId == 'top-freezer') && $('product-selector').hasClass('fr') && $(window).innerWidth() > 820) {
+                  self.learnTop = 580;
                 } else {
-                  self.descTop = 215;
+                  self.learnTop = 520;
                 }
-
                 self.playIn(self, false, changes.selectedProduct.currentValue.prodId)
               })
           }

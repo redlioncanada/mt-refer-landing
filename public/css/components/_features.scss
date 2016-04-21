@@ -218,35 +218,3 @@ features {
         }
     }
 }
-
-features.fr {
-    .row {
-        @media screen and (max-width: 1275px) {
-            $featureButtonHeight: 235px;
-            height: $featureButtonHeight;
-        }
-
-        @media screen and (max-width: $mobileBreakpoint) {
-            $featureButtonHeight: 230px;
-            height: $featureButtonHeight;
-        }
-    }
-
-    .mt-landing-feature-rule {
-        @media screen and (max-width: 1275px) {
-            font-size: 0.7em;
-        }
-    }
-
-
-    .mt-landing-feature-title {
-        @media (max-width: 479px) {
-            top: 110px;
-        }
-
-        @media screen and (max-width: 1275px) {
-            top: 95px;
-            font-size: 0.8em;
-        }
-    }
-}

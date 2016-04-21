@@ -188,16 +188,11 @@ product-selector-nav {
     @media screen and (max-width: 479px) {
         height: 220px;
     }
-    
-    .wp-refer-landing-product {
-        margin-left: -3px;
-    }
 
     .wp-refer-landing-product,.see-all {
         float: left;
         width: 17.18%;
         padding-right: 12px;
-        
 
         img {
             width: 100%;
@@ -327,44 +322,26 @@ product-selector-nav {
 }
 
 product-selector.fr {
-    .rl-wp-lndng-fridge-title {
-        width: 450px;
-    }
-
-    .rl-wp-lndng-fridge-title.mobile {
-        @media screen and (max-width: $mobileBreakpoint) {
-            width: 100%;
-        }
-    }
-
-    .rl-wp-lndng-fridge-desc {
-        width: 450px;
-
-        @media screen and (max-width: $mobileBreakpoint) {
-            width: 100%;
+    product-slides {
+        @media screen and (max-width: 479px) {
+            margin-top: 73px;
         }
     }
 
     product-selector-nav {
-        @media screen and (max-width: $mobileBreakpoint) {
-            div .wp-refer-landing-button p {
-                font-size: 0.6em;
-                font-weight: 200;
+        @media screen and (max-width: 479px) {
+            .wp-refer-landing-button p {
+                font-size: 0.4em;
             }
         }
     }
 
-    product-slides {
-        product-slide {
-            .rl-wp-lndng-fridge-title.mobile {
-                font-size: 18px;
-                line-height: 20px;
-            }
-        }
-    }
+    learn-more-button {
+        width: 150px;
 
-    learn-more-button{
-        width: 135px;
+        .learn-more-button {
+            top: 1px;
+        }
     }
 }
 
