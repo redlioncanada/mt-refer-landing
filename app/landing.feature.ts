@@ -16,14 +16,14 @@ import {AppDataService} from './services/appdata.service'
 })
 
 export class Features {
-    public featureButtons:[FeatureModel] = [];
+    public featureButtons:Array<FeatureModel> = new Array<FeatureModel>()
     private enabled: boolean
 
     constructor(private appdata: AppDataService) {
         this.enabled = true
         var data = appdata.get()
         this.enabled = data.features.enabled
-        
+
         for (var i in data.features.features) {
             var feature = data.features.features[i]
             this.featureButtons.push(

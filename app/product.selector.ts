@@ -18,9 +18,9 @@ import {ProductModel} from './models/products.model'
     directives: [ProductSlides, ProductSelectorNav],
 })
 export class ProductSelector {
-    public selectorProducts: [ProductModel];
-    public slidesProducts: [ProductModel];
-    public selectedProduct: ProductModel;
+    public selectorProducts: Array<ProductModel>
+    public slidesProducts: Array<ProductModel>
+    public selectedProduct: ProductModel
     public animating: Boolean;
     private title: string;
     private enabled: boolean
@@ -31,8 +31,8 @@ export class ProductSelector {
 
         this.enabled = data.productselector.enabled
         this.title = data.productselector.title
-        this.selectorProducts = []
-        this.slidesProducts = []
+        this.selectorProducts = new Array<ProductModel>()
+        this.slidesProducts = new Array<ProductModel>()
         for (var i in data.productselector.products) {
             var product = data.productselector.products[i]
 
