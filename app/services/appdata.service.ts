@@ -275,8 +275,8 @@ export class AppDataService {
 				ctaBackground: './public/images/button-background.png',
 				analytics: {
 					category: "@category",
-					action: "@language-Clicked Bottom Banner",
-					label: "Promotion-Learn More"
+					action: "@language-Clicked Footer Banner",
+					label: "May-Is-Maytag-Learn-More"
 				}
 			},
 			features: {
