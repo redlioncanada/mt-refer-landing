@@ -1,9 +1,5 @@
-import {Injectable, provide} from 'angular2/core'
+import {Injectable, provide, EventEmitter} from 'angular2/core'
 import {LoggerService} from './logger.service'
-import {Observable} from 'rxjs/Observable'
-import 'rxjs/add/operator/share'
-import {Observer} from 'rxjs/Observer'
-import {WindowProvider} from '../providers/window.provider'
 
 @Injectable()
 export class BreakpointService {
@@ -13,8 +9,7 @@ export class BreakpointService {
 	private debug
 	private init
 
-	event: Observable<number>
-	private _observer: Observer<Object>
+	event$: EventEmitter<any>
 
 	constructor(private logger: LoggerService, private window: Window) {
 		let self = this
@@ -23,7 +18,7 @@ export class BreakpointService {
 		this.debug = false
 		this.init = false
 
-		this.event = new Observable(observer => this._observer = observer).share()
+		this.event$ = new EventEmitter()
 		this.window.onresize = function(e) {
 			self.update.call(self, e)
 		}
@@ -62,7 +57,7 @@ export class BreakpointService {
 	}
 
 	private emit() {
-		this._observer.next(
+		this.event$.next(
 			this.breakpoint
 		)
 	}
