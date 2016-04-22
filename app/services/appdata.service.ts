@@ -27,8 +27,8 @@ export class AppDataService {
 				ctaBackground: './public/images/button-background.png',
 				analytics: {
 					category: "@category",
-					action: "Clicked Bottom Banner",
-					label: "Promotion-Learn More"
+					action: "Clicked Footer Banner",
+					label: "May-Is-Maytag-Learn-More"
 				}
 			},
 			features: {
@@ -275,7 +275,7 @@ export class AppDataService {
 				ctaBackground: './public/images/button-background.png',
 				analytics: {
 					category: "@category",
-					action: "Clicked Bottom Banner",
+					action: "@language-Clicked Bottom Banner",
 					label: "Promotion-Learn More"
 				}
 			},
@@ -293,7 +293,7 @@ export class AppDataService {
 						type: "cart",
 						analytics: {
 							category: "@category",
-							action: "Clicked Refer Resources",
+							action: "@language-Clicked Refer Resources",
 							label: "Buying Guide"
 						}
 					},
@@ -308,7 +308,7 @@ export class AppDataService {
 						type: "star",
 						analytics: {
 							category: "@category",
-							action: "Clicked Refer Resources",
+							action: "@language-Clicked Refer Resources",
 							label: "Ratings and Reviews"
 						}
 					},
@@ -323,7 +323,7 @@ export class AppDataService {
 						type: "magnifier",
 						analytics: {
 							category: "@category",
-							action: "Clicked Refer Resources",
+							action: "@language-Clicked Refer Resources",
 							label: "Find Your MT"
 						}
 					}
@@ -374,7 +374,7 @@ export class AppDataService {
 						desc: "(fr)Providing your family with fresh, healthy food is one of your strengths and Maytag's too. That's why Maytag's 4-door refrigerator sets a bold new standard for refrigeration. With advanced features and unmatched durability to keep your food chilled properly - from the first grape to the last - and when it comes to cooling, this powerful Maytag® Refrigerator is made to hold the cold. It's Dual Cool Evaporators have an evaporator dedicated to each compartment which generate ideal humidity levels in both the freezer and the refrigerator so all your food stays at it's best. And, with Maytag's 10 year limited parts warranty on the compressor, you can count on it to hold the cold for years. Maytag's patented door seal design helps lock in cold air but if things get heated, your coolness won't be compromised. Power Cold™ quickly chills down the refrigerator with the touch of a button to keep everything fresh and tasty. Just like you, the Maytag® Refrigerator keeps things running smoothly with smooth sliding premium glides and rollers. Maytag® Steel Shelves are cold to the touch and ruggedly reliable with under-shelf LED lighting that gives you light everywhere you need it. Maytag's Store-N-Door ice dispensing system and sturdy gallon door bins help to utilize every inch of your refrigerator.",
 						analytics: {
 							category: "@category",
-							action: "Clicked Built Better",
+							action: "@language-Clicked Built Better",
 							label: "Four-door"
 						}
 					},
@@ -389,7 +389,7 @@ export class AppDataService {
 						desc: "(fr)Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
 						analytics: {
 							category: "@category",
-							action: "Clicked Built Better",
+							action: "@language-Clicked Built Better",
 							label: "Temperature Drawer"
 						}
 					},
@@ -404,7 +404,7 @@ export class AppDataService {
 						desc: "(fr)At Maytag, we don't just tell you our refrigerators are made for the long haul, we're so confident in our product that we've added a 10 year limited parts warranty on select parts to back them up. Our warranty on the compressor covers the heart of the refrigerator, so you know you can count on it to hold the cold for years.",
 						analytics: {
 							category: "@category",
-							action: "Clicked Built Better",
+							action: "@language-Clicked Built Better",
 							label: "10-Year Warranty"
 						}
 					}
@@ -418,7 +418,7 @@ export class AppDataService {
 					link: 'http://www.whirlpool.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back',
 					analytics: {
 						category: "@category",
-						action: "Clicked Choose Your Refer Configuration",
+						action: "@language-Clicked Choose Your Refer Configuration",
 						label: "See all Refer"
 					}
 				},
@@ -434,7 +434,7 @@ export class AppDataService {
                         ctaBackground: "./public/images/button-background.png",
                         analytics: {
 							category: "@category",
-							action: "Clicked Choose Your Refer Configuration",
+							action: "@language-Clicked Choose Your Refer Configuration",
 							label: "Four-door",
 							learnMore: 'Learn More'
 						}
@@ -450,7 +450,7 @@ export class AppDataService {
                         ctaBackground: "./public/images/button-background.png",
                         analytics: {
 							category: "@category",
-							action: "Clicked Choose Your Refer Configuration",
+							action: "@language-Clicked Choose Your Refer Configuration",
 							label: "French Door",
 							learnMore: 'Learn More'
 						}
@@ -466,7 +466,7 @@ export class AppDataService {
                         ctaBackground: "./public/images/button-background.png",
                         analytics: {
 							category: "@category",
-							action: "Clicked Choose Your Refer Configuration",
+							action: "@language-Clicked Choose Your Refer Configuration",
 							label: "Side-by-side",
 							learnMore: 'Learn More'
 						}
@@ -482,7 +482,7 @@ export class AppDataService {
                         ctaBackground: "./public/images/button-background.png",
                         analytics: {
 							category: "@category",
-							action: "Clicked Choose Your Refer Configuration",
+							action: "@language-Clicked Choose Your Refer Configuration",
 							label: "Bottom-Freezer",
 							learnMore: 'Learn More'
 						}
@@ -498,7 +498,7 @@ export class AppDataService {
                         ctaBackground: "./public/images/button-background.png",
                         analytics: {
 							category: "@category",
-							action: "Clicked Choose Your Refer Configuration",
+							action: "@language-Clicked Choose Your Refer Configuration",
 							label: "Top-Freezer",
 							learnMore: 'Learn More'
 						}
