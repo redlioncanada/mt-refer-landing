@@ -5,7 +5,7 @@ import 'rxjs/Rx'
 import {LoggerService} from './logger.service'
 
 @Injectable()
-export class GoogleApiService {
+export class GoogleApiService{
 	public description: string
 
 	constructor(private http: Http, private logger: LoggerService) {

@@ -46,7 +46,7 @@ export class ProductSlides {
         this.titleTop = 170;
         this.descTop = 215;
         this.learnTop = 520;
-        this.breakpointChanged = this.breakpoint.event.subscribe(
+        this.breakpointChanged = this.breakpoint.event$.subscribe(
           breakpoint => this.onBreakpointChange(breakpoint)
         )
     }

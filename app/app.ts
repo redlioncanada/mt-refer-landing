@@ -1,9 +1,12 @@
-///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
+/// <reference path="../node_modules/angular2/typings/browser.d.ts"/>
+/// <reference path="../typings/jquery/jquery.d.ts" />
+/// <reference path="../typings/greensock/greensock.d.ts" />
 import {bootstrap}    from 'angular2/platform/browser'
 import {HTTP_PROVIDERS} from 'angular2/http'
 import {LoggerService} from './services/logger.service'
 import {GoogleApiService} from './services/googleapi.service'
 import {AppDataService} from './services/appdata.service'
+import {EnvironmentService} from './services/environment.service'
 import {AnalyticsService} from './services/analytics.service'
 import {BreakpointService} from './services/breakpoint.service'
 import {Component} from 'angular2/core'
@@ -34,7 +37,7 @@ import {Footer} from './landing.footer'
 class AppComponent {
 	public language: string;
 
-    constructor(private appdata: AppDataService, private analytics: AnalyticsService, private breakpoint: BreakpointService) {
+    constructor(private appdata: AppDataService, private analytics: AnalyticsService, private breakpoint: BreakpointService, private env: EnvironmentService) {
     	this.language = appdata.language
 
     	analytics.bind('language', function(str) {
@@ -43,19 +46,22 @@ class AppComponent {
         analytics.bind('category', function(str) {
             return 'Refer Landing Page'
         })
-        analytics.debugMode(true)
 
         breakpoint.add('mobile', 480)
         breakpoint.add('tablet', 481)
         breakpoint.add('desktop', 820)
-        breakpoint.debugMode(true)
     }
 
     ngAfterViewInit() {
-        //have to initialize after page load since it depends on global window being defined,
-        //and it's screen size being accurate
-        this.breakpoint.initialize()
+        this.breakpoint.afterViewInit()
+        this.env.afterViewInit()
+        this.analytics.afterViewInit()
+
+        if (this.env.isDev()) {
+            this.analytics.debugMode(true)
+            this.breakpoint.debugMode(true)
+        }
     }
  }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppDataService, AnalyticsService, BreakpointService, WindowProvider])
+bootstrap(AppComponent, [HTTP_PROVIDERS, LoggerService, GoogleApiService, AppDataService, AnalyticsService, BreakpointService, EnvironmentService, WindowProvider])

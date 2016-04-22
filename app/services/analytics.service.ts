@@ -1,5 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {LoggerService} from './logger.service';
+import {EnvironmentService} from './environment.service';
 
 declare var ga;
 
@@ -9,13 +10,13 @@ export class AnalyticsService {
 	private debug: boolean
 	private bindings
 
-	constructor(private logger: LoggerService, private window: Window) {
+	constructor(private logger: LoggerService, private window: Window, private env: EnvironmentService) {
 		this.enabled = this.gaObjectExists()
 		this.debug = false
 		this.bindings = []
 	}
 
-	ngAfterViewInit() {
+	public afterViewInit() {
 		if (!this.enabled) this.enabled = this.gaObjectExists()
 	}
 
