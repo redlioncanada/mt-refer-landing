@@ -4,6 +4,8 @@ import {VideoPlayerPlayer} from './landing.video-player.player'
 import {LoggerService} from './services/logger.service'
 import {AppDataService} from './services/appdata.service'
 
+declare var $: JQueryStatic;
+
 @Component({
     selector: 'videoplayer',
     template: `
