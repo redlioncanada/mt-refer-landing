@@ -8,23 +8,24 @@ export class BreakpointService {
 	private widths
 	private debug
 	private init
+	private window
 
 	public event$: EventEmitter<any>
 
-	constructor(private logger: LoggerService, private window: Window) {
-		let self = this
+	constructor(private logger: LoggerService) {
 		this.breakpoints = {}
 		this.widths = {}
 		this.debug = false
 		this.init = false
-
 		this.event$ = new EventEmitter()
-		this.window.onresize = function(e) {
-			self.update.call(self, e)
-		}
 	}
 
 	public afterViewInit() {
+		let self = this
+		this.window = window
+		this.window.onresize = function(e) {
+			self.update.call(self, e)
+		}
 		this.update(undefined)
 	}
 

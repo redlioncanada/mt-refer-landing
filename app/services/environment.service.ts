@@ -3,11 +3,13 @@ import {Injectable} from 'angular2/core';
 @Injectable()
 export class EnvironmentService {
 	private _environment
+	private window
 	private hosts = ['localhost', '127.0.0.1']
 
-	constructor(private window: Window) {}
+	constructor() {}
 
 	public afterViewInit() {
+		this.window = window
 		if (this.hosts.indexOf(this.window.location.hostname) > -1) {
 			this._environment = modes.DEVELOPMENT
 		} else {

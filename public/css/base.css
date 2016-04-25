@@ -921,8 +921,6 @@ rl-mt-refer-landing {
     @media screen and (max-width: 479px) {
       rl-mt-refer-landing product-selector-nav {
         height: 220px; } }
-    rl-mt-refer-landing product-selector-nav .wp-refer-landing-product {
-      margin-left: -3px; }
     rl-mt-refer-landing product-selector-nav .wp-refer-landing-product, rl-mt-refer-landing product-selector-nav .see-all {
       float: left;
       width: 17.18%;
@@ -976,7 +974,7 @@ rl-mt-refer-landing {
       color: #FFFFFF; }
     rl-mt-refer-landing product-selector-nav .see-all {
       height: 226px;
-      width: 15%;
+      width: 14%;
       color: #959595;
       text-transform: uppercase;
       display: table;
