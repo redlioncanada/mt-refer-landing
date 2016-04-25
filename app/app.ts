@@ -53,7 +53,6 @@ class AppComponent {
     }
 
     ngAfterViewInit() {
-        this.analytics.afterViewInit()
         this.breakpoint.afterViewInit()
         this.env.afterViewInit()
         this.analytics.afterViewInit()

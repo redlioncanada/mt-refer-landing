@@ -123,7 +123,7 @@ export class AppDataService {
 						ctaTitle: 'Four-door',
 						ctaText: 'Watch Video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: "Providing your family with fresh, healthy food is one of your strengths and Maytag's too. That's why Maytag's 4-door refrigerator sets a bold new standard for refrigeration. With advanced features and unmatched durability to keep your food chilled properly - from the first grape to the last - and when it comes to cooling, this powerful Maytag® Refrigerator is made to hold the cold. It's Dual Cool Evaporators have an evaporator dedicated to each compartment which generate ideal humidity levels in both the freezer and the refrigerator so all your food stays at it's best. And, with Maytag's 10 year limited parts warranty on the compressor, you can count on it to hold the cold for years. Maytag's patented door seal design helps lock in cold air but if things get heated, your coolness won't be compromised. Power Cold™ quickly chills down the refrigerator with the touch of a button to keep everything fresh and tasty. Just like you, the Maytag® Refrigerator keeps things running smoothly with smooth sliding premium glides and rollers. Maytag® Steel Shelves are cold to the touch and ruggedly reliable with under-shelf LED lighting that gives you light everywhere you need it. Maytag's Store-N-Door ice dispensing system and sturdy gallon door bins help to utilize every inch of your refrigerator.",
+						desc: "Providing your family with fresh, healthy food is one of your strengths and Maytag's too. That's why Maytag's 4-door refrigerator sets a bold new standard for refrigeration. With advanced features and unmatched durability to keep your food chilled properly - from the first grape to the last - and when it comes to cooling, this powerful Maytag® Refrigerator is made to hold the cold​.",
 						analytics: {
 							category: "@category",
 							action: "Clicked Built Better",
@@ -133,7 +133,7 @@ export class AppDataService {
 					{
 						id: 'u8rBThh8bPo',
 						thumb: './public/images/video-select-1.jpg',
-						title: 'Temperature Drawer',
+						title: 'Adjustable Temperature Refrigerated Drawer',
 						alt: "test",
 						ctaTitle: 'Temperature Drawer',
 						ctaText: 'Watch Video',
@@ -167,7 +167,7 @@ export class AppDataService {
 				title: 'Choose Your Configuration',
 				nav: {
 					text: 'See<br/>All',
-					link: 'http://www.whirlpool.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back',
+					link: 'http://cuat.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031+4294966906/',
 					analytics: {
 						category: "@category",
 						action: "Clicked Choose Your Refer Configuration",
