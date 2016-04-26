@@ -135,7 +135,7 @@ export class AppDataService {
 						thumb: './public/images/video-select-1.jpg',
 						title: 'Adjustable Temperature Refrigerated Drawer',
 						alt: "test",
-						ctaTitle: 'Temperature Drawer',
+						ctaTitle: 'Adjustable Temperature Refrigerated Drawer',
 						ctaText: 'Watch Video',
 						ctaBackground: "./public/images/button-background.png",
 						desc: "Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
@@ -167,7 +167,7 @@ export class AppDataService {
 				title: 'Choose Your Configuration',
 				nav: {
 					text: 'See<br/>All',
-					link: 'http://cuat.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031+4294966906/',
+					link: 'http://www.maytag.ca/en_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031/',
 					analytics: {
 						category: "@category",
 						action: "Clicked Choose Your Refer Configuration",
@@ -270,7 +270,7 @@ export class AppDataService {
 			banner: {
 				enabled: true,
 				link: '/en_CA/2_3_1121/jump-page_may-is-maytag-promo.content.html',
-				image: './public/images/banner.jpg',
+				image: './public/images/banner_fr.jpg',
 				ctaText: 'En savoir plus',
 				ctaBackground: './public/images/button-background.png',
 				analytics: {
@@ -331,7 +331,7 @@ export class AppDataService {
 			},
 			morefeatures: {
 				enabled: true,
-				title: "Get More From Your Refrigerator(fr)",
+				title: "Tirez Le Meilleur Parti de Votre Réfrigérateur",
 				features: [
 					{
 						title: "Accessoires",
@@ -342,7 +342,7 @@ export class AppDataService {
 						cta: ""
 					},
 					{
-						title: "Filtres à eau",
+						title: "Filtration D'eau",
 						image: "./public/images/more-features-2.jpg",
 						link: "http://www.maytag.ca/fr_CA/2_3_80/jump-page_water-filters.content.html",
 						alt: "test",
@@ -361,17 +361,17 @@ export class AppDataService {
 			},
 			videoplayer: {
 				enabled: true,
-				title: "Built Better(fr)",
+				title: "Mieux Construit",
 				videos: [
 					{
 						id: 'Fm_-PxETMUA',
 						thumb: './public/images/video-select-2.jpg',
-						title: 'Four-door(fr)',
+						title: 'Quatre Portes',
 						alt: "test",
-						ctaTitle: 'Four-door(fr)',
+						ctaTitle: 'Quatre Portes',
 						ctaText: 'Voir la video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: "(fr)Providing your family with fresh, healthy food is one of your strengths and Maytag's too. That's why Maytag's 4-door refrigerator sets a bold new standard for refrigeration. With advanced features and unmatched durability to keep your food chilled properly - from the first grape to the last - and when it comes to cooling, this powerful Maytag® Refrigerator is made to hold the cold. It's Dual Cool Evaporators have an evaporator dedicated to each compartment which generate ideal humidity levels in both the freezer and the refrigerator so all your food stays at it's best. And, with Maytag's 10 year limited parts warranty on the compressor, you can count on it to hold the cold for years. Maytag's patented door seal design helps lock in cold air but if things get heated, your coolness won't be compromised. Power Cold™ quickly chills down the refrigerator with the touch of a button to keep everything fresh and tasty. Just like you, the Maytag® Refrigerator keeps things running smoothly with smooth sliding premium glides and rollers. Maytag® Steel Shelves are cold to the touch and ruggedly reliable with under-shelf LED lighting that gives you light everywhere you need it. Maytag's Store-N-Door ice dispensing system and sturdy gallon door bins help to utilize every inch of your refrigerator.",
+						desc: "Offrir à votre famille des aliments frais et sains est l'un de vos points forts et celui de Maytag également. C'est pourquoi, le réfrigérateur à 4 portes de Maytag établit une nouvelle norme encore plus élevée pour la réfrigération. Des caractéristiques perfectionnées et une durabilité sans égal conserveront vos aliments à la bonne température, du premier au dernier raisin; et vous pourrez compter sur ce puissant modèle Maytag® pour assurer le maintien du froid.",
 						analytics: {
 							category: "@category",
 							action: "@language-Clicked Built Better",
@@ -381,12 +381,12 @@ export class AppDataService {
 					{
 						id: 'u8rBThh8bPo',
 						thumb: './public/images/video-select-1.jpg',
-						title: 'Temperature Drawer(fr)',
+						title: 'Tiroir Réfrigéré à Température Réglable',
 						alt: "test",
-						ctaTitle: 'Temperature Drawer(fr)',
+						ctaTitle: 'Tiroir Réfrigéré à Température Réglable',
 						ctaText: 'Voir la video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: "(fr)Maytag's Adjustable Temperature Refrigerated Drawer let's you select a precise setting and allows plenty of space for when you really want to stock up and it's full extension construction puts everything in the drawer within easy reach. It's a new storage option that gives you a flexible spot for meats and cheeses, fruits and vegetables, drinks - whatever you want! You decide, then select the setting to match. At last, a refrigerator that adjusts to your needs.",
+						desc: "Le tiroir réfrigéré à température réglable Maytag vous permet de choisir un réglage précis et procure amplement d'espace lorsque vous souhaitez faire des provisions. Sa conception à pleine extension permet un accès facile à tous les articles qui y sont rangés. C'est une nouvelle option de rangement qui vous offre un endroit supplémentaire pour les viandes, fromages, fruits, légumes et tout ce que vous voulez! Vous décidez, puis vous choisissez le réglage correspondant. Enfin un réfrigérateur qui s'adapte à vos besoins!",
 						analytics: {
 							category: "@category",
 							action: "@language-Clicked Built Better",
@@ -401,7 +401,7 @@ export class AppDataService {
 						ctaTitle: 'Garantie limitée de 10 ans',
 						ctaText: 'Voir la video',
 						ctaBackground: "./public/images/button-background.png",
-						desc: "(fr)At Maytag, we don't just tell you our refrigerators are made for the long haul, we're so confident in our product that we've added a 10 year limited parts warranty on select parts to back them up. Our warranty on the compressor covers the heart of the refrigerator, so you know you can count on it to hold the cold for years.",
+						desc: "Chez Maytag, nous ne nous contentons pas de vous dire que nos réfrigérateurs durent longtemps, nous sommes en effet tellement confiants en nos produits que nous avons ajouté une garantie limitée de 10 ans sur certaines pièces. Notre garantie sur les pièces du compresseur couvre la pièce maîtresse du réfrigérateur. Vous pouvez donc compter sur votre modèle pour maintenir le froid pendant des années.",
 						analytics: {
 							category: "@category",
 							action: "@language-Clicked Built Better",
@@ -412,10 +412,10 @@ export class AppDataService {
 			},
 			productselector: {
 				enabled: true,
-				title: 'Choose Your Configuration(fr)',
+				title: 'Choisissez Votre Configuration',
 				nav: {
 					text: 'Voir<br/>Tout',
-					link: 'http://www.whirlpool.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators-3/102280023+102110368/#back',
+					link: 'http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_French_Door-3/102290031/',
 					analytics: {
 						category: "@category",
 						action: "@language-Clicked Choose Your Refer Configuration",
@@ -425,7 +425,7 @@ export class AppDataService {
 				products: [
 					{
 						image: "./public/images/products/four-door.png",
-                        title: "Four-door(fr)",
+                        title: "Quatre Portes",
                         alt: "test",
                         desc: "Ce réfrigérateur vous permettra non seulement de ranger vos articles, mais de le faire à votre façon. Grâce au tiroir-réfrigérateur à température réglable et au bac coulissant EasySlide, vous pouvez maintenant ranger et conserver tout ce que vous voulez, exactement comme vous le voulez. Par ailleurs, la conception épurée de ce modèle à 4 portes lui confère une grande élégance extérieure.",
                         link: "http://www.maytag.ca/fr_CA/Kitchen-1/Kitchen_Refrigeration_Refrigerators_Top_Freezer-3/102290031+112290217/",

@@ -35,6 +35,20 @@ videoplayer {
 		li:last-child {
 			padding-right: 0;
 		}
+
+		li:nth-child(2) {
+			videoplayer-selector {
+				.wp-refer-landing-videoplayer-title {
+					margin-top: -60px;
+				}
+
+				@media(max-width: 479px) {
+					.wp-refer-landing-videoplayer-title {
+						margin-top: -40px;
+					}
+				}
+			}
+		}
 	}
 }
 

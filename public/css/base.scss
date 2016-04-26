@@ -85,4 +85,9 @@ rl-mt-refer-landing {
 	}
 }
 
+
+.device-mobile rl-mt-refer-landing {
+	@import 'components/mobile/videoplayer.scss';
+}
+
 @import 'components/browser-specific/ie.scss';

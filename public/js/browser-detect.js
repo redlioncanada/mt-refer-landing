@@ -2,6 +2,7 @@ var BrowserDetect = {
         init: function () {
             this.browser = this.searchString(this.dataBrowser) || "Other";
             this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
+            this.device = this.searchDevice(navigator.userAgent);
         },
         searchString: function (data) {
             for (var i = 0; i < data.length; i++) {
@@ -26,7 +27,11 @@ var BrowserDetect = {
                 return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
             }
         },
-
+        searchDevice: function(dataString) {
+            //as recommended by Firefox documentation
+            //https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent
+            return /Mobi/.test(dataString) ? "mobile" : "desktop"
+        },
         dataBrowser: [
             {string: navigator.userAgent, subString: "Edge", identity: "MS Edge"},
             {string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
@@ -41,5 +46,5 @@ var BrowserDetect = {
     };
 BrowserDetect.init();
 $(window).ready(function() {
-    document.getElementsByTagName('rl-mt-refer-landing')[0].className+=' '+BrowserDetect.browser.toLowerCase()+BrowserDetect.version
+    document.getElementsByTagName('body')[0].className+=' browser-'+BrowserDetect.browser.toLowerCase()+BrowserDetect.version+' device-'+BrowserDetect.device
 })
