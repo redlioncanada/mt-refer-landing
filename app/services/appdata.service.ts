@@ -364,7 +364,7 @@ export class AppDataService {
 				title: "Mieux Construit",
 				videos: [
 					{
-						id: 'Fm_-PxETMUA',
+						image: './public/images/video-image-1.jpg',
 						thumb: './public/images/video-select-2.jpg',
 						title: 'Quatre Portes',
 						alt: "test",
@@ -379,7 +379,7 @@ export class AppDataService {
 						}
 					},
 					{
-						id: 'u8rBThh8bPo',
+						image: './public/images/video-image-2.jpg',
 						thumb: './public/images/video-select-1.jpg',
 						title: 'Tiroir Réfrigéré à Température Réglable',
 						alt: "test",
@@ -394,7 +394,7 @@ export class AppDataService {
 						}
 					},
 					{
-						id: 'OSgIUSI1ZkE',
+						image: './public/images/video-image-3.jpg',
 						thumb: './public/images/video-select-3.jpg',
 						title: 'Garantie limitée de 10 ans',
 						alt: "test",
