@@ -395,7 +395,7 @@ export class AppDataService {
 					},
 					{
 						image: './public/images/video-image-3.jpg',
-						thumb: './public/images/video-select-3.jpg',
+						thumb: './public/images/video-select-3-fr.jpg',
 						title: 'Garantie limitée de 10 ans',
 						alt: "test",
 						ctaTitle: 'Garantie limitée de 10 ans',
