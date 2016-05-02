@@ -27,6 +27,10 @@ banner {
 
 banner.fr {
     learn-more-button {
+        p {
+            font-size: 0.8em;
+        }
+        
         @media screen and (max-width: 479px) {
             width: 31%;
         }

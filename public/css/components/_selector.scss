@@ -336,11 +336,19 @@ product-selector.fr {
         }
     }
 
+    .rl-wp-lndng-fridge-desc {
+        width: 370px;
+    }
+
     learn-more-button {
         width: 165px;
 
         .learn-more-button {
             top: 1px;
+        }
+
+        .learn-more-button p {
+            line-height: 36px;
         }
     }
 }

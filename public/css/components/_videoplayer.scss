@@ -82,7 +82,11 @@ videoplayer-player {
 		.wp-refer-landing-videoplayer-description, .wp-refer-landing-videoplayer-title {
 			text-align: center;
 		}
-        
+
+		.wp-refer-landing-videoplayer-title {
+			letter-spacing: 0px;
+		}
+
         .wp-refer-landing-videoplayer-description{
         	margin-top: 10px;
             @media screen and (max-width: $mobileBreakpoint) {
@@ -199,12 +203,16 @@ videoplayer-selector {
 videoplayer.fr {
 	videoplayer-selector .wp-refer-landing-videoplayer-text {
 		learn-more-button {
-			width: 47%;
-			line-height: 27px;
+			width: 40%;
+			line-height: 22px;
+		}
+
+		learn-more-button p {
+			margin: 2px 0 0 0;
 		}
 
 		learn-more-button p:after {
-			top: 6px;
+			content: '';
 		}
 	}
 }
