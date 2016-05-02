@@ -195,3 +195,16 @@ videoplayer-selector {
 		}
 	}
 }
+
+videoplayer.fr {
+	videoplayer-selector .wp-refer-landing-videoplayer-text {
+		learn-more-button {
+			width: 47%;
+			line-height: 27px;
+		}
+
+		learn-more-button p:after {
+			top: 6px;
+		}
+	}
+}

@@ -549,6 +549,11 @@ rl-mt-refer-landing {
         opacity: 1; }
       rl-mt-refer-landing videoplayer-selector .selected .wp-refer-landing-videoplayer-title {
         opacity: 0; }
+  rl-mt-refer-landing videoplayer.fr videoplayer-selector .wp-refer-landing-videoplayer-text learn-more-button {
+    width: 47%;
+    line-height: 27px; }
+  rl-mt-refer-landing videoplayer.fr videoplayer-selector .wp-refer-landing-videoplayer-text learn-more-button p:after {
+    top: 6px; }
   rl-mt-refer-landing masthead {
     width: 80%;
     position: relative;
@@ -1027,7 +1032,7 @@ rl-mt-refer-landing {
     rl-mt-refer-landing product-selector.fr product-selector-nav .wp-refer-landing-button p {
       font-size: 0.4em; } }
   rl-mt-refer-landing product-selector.fr learn-more-button {
-    width: 150px; }
+    width: 165px; }
     rl-mt-refer-landing product-selector.fr learn-more-button .learn-more-button {
       top: 1px; }
   rl-mt-refer-landing .product-slide-background {

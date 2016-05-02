@@ -369,7 +369,7 @@ export class AppDataService {
 						title: 'Quatre Portes',
 						alt: "test",
 						ctaTitle: 'Quatre Portes',
-						ctaText: 'Voir la video',
+						ctaText: 'Voir',
 						ctaBackground: "./public/images/button-background.png",
 						desc: "Offrir à votre famille des aliments frais et sains est l'un de vos points forts et celui de Maytag également. C'est pourquoi, le réfrigérateur à 4 portes de Maytag établit une nouvelle norme encore plus élevée pour la réfrigération. Des caractéristiques perfectionnées et une durabilité sans égal conserveront vos aliments à la bonne température, du premier au dernier raisin; et vous pourrez compter sur ce puissant modèle Maytag® pour assurer le maintien du froid.",
 						analytics: {
@@ -384,7 +384,7 @@ export class AppDataService {
 						title: 'Tiroir Réfrigéré à Température Réglable',
 						alt: "test",
 						ctaTitle: 'Tiroir Réfrigéré à Température Réglable',
-						ctaText: 'Voir la video',
+						ctaText: 'Voir',
 						ctaBackground: "./public/images/button-background.png",
 						desc: "Le tiroir réfrigéré à température réglable Maytag vous permet de choisir un réglage précis et procure amplement d'espace lorsque vous souhaitez faire des provisions. Sa conception à pleine extension permet un accès facile à tous les articles qui y sont rangés. C'est une nouvelle option de rangement qui vous offre un endroit supplémentaire pour les viandes, fromages, fruits, légumes et tout ce que vous voulez! Vous décidez, puis vous choisissez le réglage correspondant. Enfin un réfrigérateur qui s'adapte à vos besoins!",
 						analytics: {
@@ -399,7 +399,7 @@ export class AppDataService {
 						title: 'Garantie limitée de 10 ans',
 						alt: "test",
 						ctaTitle: 'Garantie limitée de 10 ans',
-						ctaText: 'Voir la video',
+						ctaText: 'Voir',
 						ctaBackground: "./public/images/button-background.png",
 						desc: "Chez Maytag, nous ne nous contentons pas de vous dire que nos réfrigérateurs durent longtemps, nous sommes en effet tellement confiants en nos produits que nous avons ajouté une garantie limitée de 10 ans sur certaines pièces. Notre garantie sur les pièces du compresseur couvre la pièce maîtresse du réfrigérateur. Vous pouvez donc compter sur votre modèle pour maintenir le froid pendant des années.",
 						analytics: {
