@@ -41,7 +41,7 @@ export class AppDataService {
 						desc: "What to look for when buying",
 						ctaText: "Click Here",
 						ctaBackground: "./public/images/button-background.png",
-						link: "https://www.google.ca/#q=placeholder",
+						link: "/other-assets/en_CA/pdf/Maytag_Refrigerator_Buying%20Guide_EN.pdf",
 						type: "cart",
 						analytics: {
 							category: "@category",
@@ -289,7 +289,7 @@ export class AppDataService {
 						desc: "Éléments à considérer lorsque vous magasinez",
 						ctaText: "Cliquez ici",
 						ctaBackground: "./public/images/button-background.png",
-						link: "https://www.google.ca/#q=placeholder",
+						link: "/other-assets/fr_CA/pdf/MT_Refrigerateurs_GuideD-achat.pdf",
 						type: "cart",
 						analytics: {
 							category: "@category",
