@@ -41,7 +41,7 @@ export class AppDataService {
 						desc: "What to look for when buying",
 						ctaText: "Click Here",
 						ctaBackground: "./public/images/button-background.png",
-						link: "/other-assets/en_CA/pdf/Maytag_Refrigerator_Buying%20Guide_EN.pdf",
+						link: "/other-assets/en_CA/pdf/Maytag_Refrigerator_BuyingGuide_EN.pdf",
 						type: "cart",
 						analytics: {
 							category: "@category",
