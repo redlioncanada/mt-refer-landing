@@ -19,6 +19,7 @@ export class AnalyticsService {
 	public afterViewInit() {
 		this.window = window
 		if (!this.enabled) this.enabled = this.gaObjectExists()
+		console.log("Is active = :" + this.enabled);
 	}
 
 	public sendEvent(props) {
