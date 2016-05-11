@@ -6,7 +6,7 @@ declare var $: JQueryStatic;
 @Component({
     selector: 'feature-button',
     template: `
-        <a href="{{btnLink}}" analyticsOn="click" analyticsCategory="{{analytics.category}}" analyticsAction="{{analytics.action}}" analyticsLabel="{{analytics.label}}">
+        <a href="{{btnLink}}" target="_blank" analyticsOn="click" analyticsCategory="{{analytics.category}}" analyticsAction="{{analytics.action}}" analyticsLabel="{{analytics.label}}">
             <div class="mt-landing-feature-button" >
                 <div class="mt-landing-feature-button-up">
                     <div class="mt-landing-feature-icon mt-landing-innerBtn"><img class="{{btnType}}" src={{btnIcon}} alt="{{btnAlt}}" /></div>
