@@ -91,7 +91,12 @@ export class AppDataService {
 						link: "http://www.maytag.ca/en_CA/Accessories-1/Accessories_Kitchen_Refrigerator-3/102290104/",
 						alt: "test",
 						text: "",
-						cta: ""
+						cta: "",
+						analytics: {
+							category: "@category",
+							action: "test1",
+							label: "test2"
+						}
 					},
 					{
 						title: "Water Filtration",
@@ -99,7 +104,12 @@ export class AppDataService {
 						link: "http://www.maytag.ca/en_CA/2_3_80/jump-page_water-filters.content.html",
 						alt: "test",
 						text: "",
-						cta: ""
+						cta: "",
+						analytics: {
+							category: "@category",
+							action: "test1",
+							label: "test2"
+						}
 					},
 					{
 						title: "Certified Care",
@@ -107,7 +117,12 @@ export class AppDataService {
 						link: "http://www.maytag.ca/en_CA/2_3_1/jump-page_extended-service-plans.content.html",
 						alt: "test",
 						text: "",
-						cta: ""
+						cta: "",
+						analytics: {
+							category: "@category",
+							action: "test1",
+							label: "test2"
+						}
 					}
 				]
 			},
@@ -339,7 +354,12 @@ export class AppDataService {
 						link: "http://www.maytag.ca/fr_CA/Accessories-1/Accessories_Kitchen_Refrigerator-3/102290104/",
 						alt: "test",
 						text: "",
-						cta: ""
+						cta: "",
+						analytics: {
+							category: "@category",
+							action: "test1",
+							label: "test2"
+						}
 					},
 					{
 						title: "Filtration D'eau",
@@ -347,7 +367,12 @@ export class AppDataService {
 						link: "http://www.maytag.ca/fr_CA/2_3_80/jump-page_water-filters.content.html",
 						alt: "test",
 						text: "",
-						cta: ""
+						cta: "",
+						analytics: {
+							category: "@category",
+							action: "test1",
+							label: "test2"
+						}
 					},
 					{
 						title: "Entretien autorisé",
@@ -355,7 +380,12 @@ export class AppDataService {
 						link: "http://www.maytag.ca/fr_CA/2_3_1/jump-page_extended-service-plans.content.html",
 						alt: "test",
 						text: "",
-						cta: ""
+						cta: "",
+						analytics: {
+							category: "@category",
+							action: "test1",
+							label: "test2"
+						}
 					}
 				]
 			},
