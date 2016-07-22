@@ -94,8 +94,8 @@ export class AppDataService {
 						cta: "",
 						analytics: {
 							category: "@category",
-							action: "test1",
-							label: "test2"
+							action: "Clicked Get More From Your Refrigerator",
+							label: "Additional Accessories"
 						}
 					},
 					{
@@ -107,8 +107,8 @@ export class AppDataService {
 						cta: "",
 						analytics: {
 							category: "@category",
-							action: "test1",
-							label: "test2"
+							action: "Clicked Get More From Your Refrigerator",
+							label: "Water Filteration"
 						}
 					},
 					{
@@ -120,8 +120,8 @@ export class AppDataService {
 						cta: "",
 						analytics: {
 							category: "@category",
-							action: "test1",
-							label: "test2"
+							action: "Clicked Get More From Your Refrigerator",
+							label: "Certified Care"
 						}
 					}
 				]
@@ -357,8 +357,8 @@ export class AppDataService {
 						cta: "",
 						analytics: {
 							category: "@category",
-							action: "test1",
-							label: "test2"
+							action: "Clicked Get More From Your Refrigerator",
+							label: "Additional Accessories"
 						}
 					},
 					{
@@ -370,8 +370,8 @@ export class AppDataService {
 						cta: "",
 						analytics: {
 							category: "@category",
-							action: "test1",
-							label: "test2"
+							action: "Clicked Get More From Your Refrigerator",
+							label: "Water Filteration"
 						}
 					},
 					{
@@ -383,8 +383,8 @@ export class AppDataService {
 						cta: "",
 						analytics: {
 							category: "@category",
-							action: "test1",
-							label: "test2"
+							action: "Clicked Get More From Your Refrigerator",
+							label: "Certified Care"
 						}
 					}
 				]

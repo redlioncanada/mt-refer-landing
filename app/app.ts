@@ -30,7 +30,7 @@ import {Footer} from './landing.footer'
 		<product-selector class="{{language}}"></product-selector>
 		<videoplayer class="{{language}}"></videoplayer>
 		<more-features class="{{language}}"></more-features>
-		<banner class="{{language}}"></banner>
+		<!--<banner class="{{language}}"></banner>-->
     `,
     directives: [VideoPlayer, AppMasthead, Features, ProductSelector, Banner, MoreFeatures, Header, Footer]
 })
@@ -58,7 +58,7 @@ class AppComponent {
         this.analytics.afterViewInit()
 
         if (this.env.isDev()) {
-            this.analytics.debugMode(true)
+            // this.analytics.debugMode(true)
             this.breakpoint.debugMode(true)
         }
     }
