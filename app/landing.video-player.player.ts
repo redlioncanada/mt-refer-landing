@@ -8,7 +8,7 @@ import {VideoPlayerVideo} from './landing.video-player.video'
     	<div>
 			<ul>
 				<li *ngFor="#video of data; #i=index" class="{{currentId !== i ? 'hide' : 'show'}}">
-					<videoplayer-video [image]="video.image" [id]="video.id" [selected]="currentId == i" [width]="video.width" [height]="video.height"></videoplayer-video>
+					<videoplayer-video [image]="video.image" [id]="video.id" [selected]="currentId == i" [alt]="video.thumbAlt" [width]="video.width" [height]="video.height"></videoplayer-video>
 				</li>
 			</ul>
 		    <div class="wp-refer-landing-videoplayer-text">
